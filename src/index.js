@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './views/pages/Quintaisdocaneiro/App';
 import * as serviceWorker from './serviceWorker';
 import { Link, Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Alojamento from './Alojamento'
+import Alojamento from './views/pages/Alojamento/Alojamento'
+import Natureza from './views/pages/Natureza/Natureza'
 
 const routing = (
   <Router>
   <ul>
   <li>
-  <Link to="/Alojamento">Alojamento</Link>
-  </li>
+  <Link to="/">Home</Link></li>
   <li>
-    <Link to="/">Home</Link>
+  <Link to="/Alojamento">Alojamento</Link></li>
+    <li>
+      <Link to="/Natureza">Natureza</Link>
     </li>
   </ul>
   <Route exact path="/" component={App} />
   <Route exact path="/Alojamento" component={Alojamento} />
+  <Route exact path="/Natureza" component={Natureza} />
   </Router>
   )
   ReactDOM.render(routing, document.getElementById('root'))
