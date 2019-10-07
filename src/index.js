@@ -11,18 +11,7 @@ import Reservas from './views/pages/Reservas/Index'
 
 const routing = (
   <Router>
-  <ul>
-  <li>
-  <Link to="/">Home</Link></li>
-  <li>
-  <Link to="/Alojamento">Alojamento</Link></li>
-    <li>
-      <Link to="/Natureza">Natureza</Link>
-    </li>
-    <li>
-      <Link to="/Reservas">Galeria</Link>
-    </li>
-  </ul>
+  
   <Route exact path="/" component={App} />
   <Route exact path="/Alojamento" component={Alojamento} />
   <Route exact path="/Natureza" component={Natureza} />

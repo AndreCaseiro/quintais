@@ -1283,7 +1283,8 @@ html,body{
 .subscribe {
     position: relative;
     padding: 120px 0;
-    background: url(../../assets/images/home/subscribe-banner.jpg)no-repeat center fixed;
+    background: url(https://static.photocdn.pt/images/articles/2017_1/iStock-506444552.jpg)no-repeat center fixed;
+    
     background-size: cover;
     z-index: 1;
 }
