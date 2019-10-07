@@ -48,7 +48,7 @@ font-family: 'Poppins', sans-serif;
 body{
     position: relative;
 	font-size:14px;
-	color: #222222;
+	color: #be9898;
 	background: #fff;
 	font-family: 'Poppins', sans-serif;
     max-width:1920px;
@@ -80,6 +80,7 @@ h1,h2,h3,h4,h5,h6 {
 p {
 
 	margin: 0;
+	color:#666666;
 	font-size:14px;
 
 }
@@ -90,13 +91,13 @@ ul{
 
 	padding: 0;
     margin: 0;
-    display: list-item;
+    list-style: none;
 
 }
 
 ul li {
 
-    display: list-item;
+	list-style: none;
 
 	
 
@@ -209,10 +210,10 @@ html,body{
 .main-menu .nav li a{
     padding: 11px 0 29px;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
-    font-weight:500;
+    font-weight:600;
     -webkit-transition: all 0.25s ease-in-out 0s;
     -moz-transition: all 0.25s ease-in-out 0s;
     -o-transition: all 0.25s ease-in-out 0s;
@@ -296,6 +297,7 @@ html,body{
 		3. 	About
 --------------------------------------*/
 .about-us{
+    z-index:-9000;
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -1554,35 +1556,5 @@ html,body{
 
 }
 
-.App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    height: 40vmin;
-  }
-  
-  .App-header {
-    background-color:grey;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #09d3ac;
-  }
-  
-  .texto{
-    font-size:15px;
-  }
-
-.Alojamento{
-    margin-left:20px;
-}
 
 /*========================Thank you=================*/

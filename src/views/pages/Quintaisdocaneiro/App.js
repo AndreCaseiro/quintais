@@ -7,7 +7,7 @@ import "./../../css/style.css";
         return (
       <Router>
        <div className="App">
-        <a href="">
+        <a href="/">
           Quintais do <span>Caneiro</span>
         </a>
           <header className="App-header">

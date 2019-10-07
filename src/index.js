@@ -7,6 +7,7 @@ import { Link, Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Alojamento from './views/pages/Alojamento/Alojamento'
 import Natureza from './views/pages/Natureza/Natureza'
+import Reservas from './views/pages/Reservas/Index'
 
 const routing = (
   <Router>
@@ -18,10 +19,15 @@ const routing = (
     <li>
       <Link to="/Natureza">Natureza</Link>
     </li>
+    <li>
+      <Link to="/Reservas">Galeria</Link>
+    </li>
   </ul>
   <Route exact path="/" component={App} />
   <Route exact path="/Alojamento" component={Alojamento} />
   <Route exact path="/Natureza" component={Natureza} />
+  <Route exact path="/Reservas" component={Reservas} />
+
   </Router>
   )
   ReactDOM.render(routing, document.getElementById('root'))
