@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from "@brainhubeu/react-carousel";
 import { Link } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 import './reservas.css';
 import "./../../css/animate.css";
@@ -16,6 +17,8 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import Image1 from "./../../css/images/gallary/g1.jpg";
 import Image2 from "./../../css/images/gallary/g2.jpg";
 import Image3 from "./../../css/images/gallary/g3.jpg";
+import DropdownItem from 'react-bootstrap/DropdownItem';
+
 
 class Reservas extends Component {
     render() {
@@ -39,18 +42,21 @@ class Reservas extends Component {
                     </button>
                     </div>
                     <div class="collapse navbar-collapse">
+                    <Dropdown>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                  <Link to="/">Home</Link></li>
+                    <DropdownItem tag={Link} to="/">Home</DropdownItem>
+                  </li>
                   <li>
                   <Link to="/Alojamento">Alojamento</Link></li>
                     <li>
                       <Link to="/Natureza">Natureza</Link>
                     </li>
                     <li>
-                      <Link to="/Reservas">Galeria</Link>
+                      <Link to="/Reservas">Reservas</Link>
                     </li>
                     </ul>
+                    </Dropdown>
                     </div>
                 </div>
                 </div>
@@ -85,7 +91,6 @@ class Reservas extends Component {
           </div>
         </div>
       </div>
-
     </section>
                 <div
           className="App"
@@ -96,7 +101,7 @@ class Reservas extends Component {
             <img alt="Image2" src={Image2} />
             <img alt="Image3" src={Image3} />
           </Carousel>
-          
+          </div>
         </div>
           <section id="subs" className="subscribe">
               <div className="container">
@@ -110,7 +115,6 @@ class Reservas extends Component {
                 </div>
               </div>
           </section>
-            </div>
             <footer class="footer-copyright">
                 <div class="container">
                         <div class="foot-icons ">
