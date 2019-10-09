@@ -29,9 +29,9 @@ class Footer extends Component {
                 <div class="container">
                         <div class="foot-icons ">
                         <ul class="footer-social-links list-inline list-unstyled">
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                     <p>&copy; 2019 <a href="http://www.quintaisdocaneiro.com">Quintais Do Caneiro</a>. All Right Reserved</p>
 

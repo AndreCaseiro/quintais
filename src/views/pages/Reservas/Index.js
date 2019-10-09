@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from "@brainhubeu/react-carousel";
 import { Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown'
 
-import './reservas.css';
 import "./../../css/animate.css";
 import "./../../css/bootsnav.css";
 import "./../../css/bootstrap.min.css";
@@ -17,7 +15,6 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import Image1 from "./../../css/images/gallary/g1.jpg";
 import Image2 from "./../../css/images/gallary/g2.jpg";
 import Image3 from "./../../css/images/gallary/g3.jpg";
-import DropdownItem from 'react-bootstrap/DropdownItem';
 
 
 class Reservas extends Component {
@@ -37,16 +34,15 @@ class Reservas extends Component {
                 <div class="col-sm-10">
                 <div class="main-menu">
                     <div class="navbar-header">
+                    
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
                     </div>
                     <div class="collapse navbar-collapse">
-                    <Dropdown>
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                    <DropdownItem tag={Link} to="/">Home</DropdownItem>
-                  </li>
+                  <Link to="/">Home</Link></li>
                   <li>
                   <Link to="/Alojamento">Alojamento</Link></li>
                     <li>
@@ -56,7 +52,6 @@ class Reservas extends Component {
                       <Link to="/Reservas">Reservas</Link>
                     </li>
                     </ul>
-                    </Dropdown>
                     </div>
                 </div>
                 </div>
@@ -119,9 +114,9 @@ class Reservas extends Component {
                 <div class="container">
                         <div class="foot-icons ">
                         <ul class="footer-social-links list-inline list-unstyled">
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="/#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
                                     </ul>
                                     <p>&copy; 2019 <a href="http://www.quintaisdocaneiro.com">Quintais Do Caneiro</a>. All Right Reserved</p>
 

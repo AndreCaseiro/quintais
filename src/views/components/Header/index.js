@@ -9,6 +9,9 @@ import "./../../css/hover-min.css";
 import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
+import Dropdown from 'react-bootstrap/Dropdown'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DropdownButton from 'react-bootstrap/DropdownButton'
 
 class Header extends Component {
     render(){
@@ -33,6 +36,13 @@ class Header extends Component {
                         <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                         <li>
+                        <DropdownButton id="dropdown-basic-button" title="Quintais do Caneiro">
+                            <Dropdown.Item href="./Alojamento">Alojamento</Dropdown.Item>
+                            <Dropdown.Item href="./Reservas">Reservas</Dropdown.Item>
+                            <Dropdown.Item href="./">Home</Dropdown.Item>
+                        </DropdownButton>
+                        </li>
+                        <li>
                       <Link to="/">Home</Link></li>
                       <li>
                       <Link to="/Alojamento">Alojamento</Link></li>
@@ -44,6 +54,7 @@ class Header extends Component {
                         </li>
                         </ul>
                         </div>
+                        
                     </div>
                     </div>
                 </div>

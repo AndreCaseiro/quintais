@@ -1,64 +1,45 @@
 import React, { Component } from 'react';
 import "./../../css/style.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './../../components/Footer/index';
+import Header from './../../components/Header/index';
 
 class Natureza extends Component {
     render() {
     return(
-        <React.Fragment>
-            <header class="top-area">
-        <div class="header-area">
-            <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                <div class="logo">
-                    <a href="/Home"><img src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
-                </div>
-                </div>
-                <div class="col-sm-10">
-                <div class="main-menu">
-                    <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <i class="fa fa-bars"></i>
+        <div className="Header">
+      <Header></Header>
+      
+      <section id="home" class="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjp1emnbrovp615jbfhvo.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+      <div class="container">
+        <div class="about-us-content">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="single-about-us">
+                <div class="about-us-txt">
+                  <h2>
+                    Explore the Beauty of the Beautiful World 
+
+                  </h2>
+                  <div class="about-btn">
+                    <button  class="about-view">
+                      explore now
                     </button>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-
-                    </ul>
-                    </div>
+                  </div>
                 </div>
-                </div>
+              </div>
             </div>
-            <div class="home-border"></div>
+            <div class="col-sm-0">
+              <div class="single-about-us">
+              </div>
             </div>
+          </div>
         </div>
-        </header>
-
-
-
-
-
-
-
-
-        <footer class="footer-copyright">
-                <div class="container">
-                        <div class="foot-icons ">
-                        <ul class="footer-social-links list-inline list-unstyled">
-                                    <li><a  target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a  target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a  target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                    <p>&copy; 2019 <a href="http://www.quintaisdocaneiro.com">Quintais Do Caneiro</a>. All Right Reserved</p>
-
-                            </div>
-                        <div id="scroll-Top">
-                        <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-                        </div>
-                        </div>
-                    </footer>
-    </React.Fragment>
+      </div>
+    </section>
+    <div className="Footer"><Footer></Footer></div>
+    </div>
+    
     );
 }
 }
