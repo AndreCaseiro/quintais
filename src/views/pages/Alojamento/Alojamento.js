@@ -28,14 +28,8 @@ class Alojamento extends Component {
               <div class="single-about-us">
                 <div class="about-us-txt">
                   <h2>
-                    Explore the Beauty of the Beautiful World 
-
+                    Alojamento
                   </h2>
-                  <div class="about-btn">
-                    <button  class="about-view">
-                      explore now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

@@ -34,7 +34,6 @@ class Reservas extends Component {
                 <div class="col-sm-10">
                 <div class="main-menu">
                     <div class="navbar-header">
-                    
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>

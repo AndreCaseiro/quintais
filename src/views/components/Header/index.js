@@ -37,24 +37,33 @@ class Header extends Component {
                         <ul class="nav navbar-nav navbar-right">
                         <li>
                         <DropdownButton id="dropdown-basic-button" title="Quintais do Caneiro">
-                            <Dropdown.Item href="./Alojamento">Alojamento</Dropdown.Item>
-                            <Dropdown.Item href="./Reservas">Reservas</Dropdown.Item>
-                            <Dropdown.Item href="./">Home</Dropdown.Item>
+                            <Dropdown.Item href="./Empreendimento">Empreendimento</Dropdown.Item>
+                            <Dropdown.Item href="./Galeria">Empreendimento</Dropdown.Item>
                         </DropdownButton>
                         </li>
                         <li>
-                      <Link to="/">Home</Link></li>
-                      <li>
-                      <Link to="/Alojamento">Alojamento</Link></li>
-                        <li>
-                          <Link to="/Natureza">Natureza</Link>
+                        <DropdownButton id="dropdown-basic-button" title="Alojamento">
+                            <Dropdown.Item href="./Localizacao">A localização</Dropdown.Item>
+                            <Dropdown.Item href="./Comodidades">Comodidades</Dropdown.Item>
+                            <Dropdown.Item href="./VerAlojamento">Ver alojamento</Dropdown.Item>
+                        </DropdownButton>
                         </li>
                         <li>
-                          <Link to="/Reservas">Galeria</Link>
+                        <DropdownButton id="dropdown-basic-button" title="Natureza">
+                            <Dropdown.Item href="./Atividades">Atividades exteriores</Dropdown.Item>
+                            <Dropdown.Item href="./Caminho">O Caminho</Dropdown.Item>
+                        </DropdownButton>
+                        </li>
+                        <li>
+                        <DropdownButton id="dropdown-basic-button" title="Contactos">
+                            <Dropdown.Item href="./Alojamento">Alojamento</Dropdown.Item>
+                        </DropdownButton>
+                        </li>
+                        <li>
+                          <Link to="/Reservas">Reservas</Link>
                         </li>
                         </ul>
                         </div>
-                        
                     </div>
                     </div>
                 </div>
