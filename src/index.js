@@ -15,6 +15,7 @@ import VerAlojamento from './views/pages/Alojamento/VerAlojamento'
 import Atividades from './views/pages/Natureza/Atividades';
 import Caminho from './views/pages/Natureza/Caminho';
 import Galeria from './views/pages/Quintaisdocaneiro/Galeria'
+import Contactos from './views/pages/Contactos/index'
 
 const routing = (
   <Router>
@@ -29,6 +30,7 @@ const routing = (
   <Route exact path="/Atividades" component={Atividades} />
   <Route exact path="/Caminho" component={Caminho} />
   <Route exact path="/Galeria" component={Galeria} />
+  <Route exact path="/Contactos" component={Contactos} />
 
 
 

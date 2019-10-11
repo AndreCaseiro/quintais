@@ -15,7 +15,7 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 
-class Alojamento extends Component {
+class Contactos extends Component {
     render() {
     return(
       <div className="Header">
@@ -28,14 +28,8 @@ class Alojamento extends Component {
               <div class="single-about-us">
                 <div class="about-us-txt">
                   <h2>
-                    Explore the Beauty of the Beautiful World 
-
+                    Contactos
                   </h2>
-                  <div class="about-btn">
-                    <button  class="about-view">
-                      explore now
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -47,10 +41,11 @@ class Alojamento extends Component {
         </div>
       </div>
     </section>
+    <div className="Contactos"></div>
     <div className="Footer"><Footer></Footer></div>
     </div>
 
     );
 }
 }
-export default Alojamento;
+export default Contactos;

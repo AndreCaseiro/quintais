@@ -15,8 +15,56 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 
+const axios = require('axios').default;
+
+// const getPage = (callback) => {
+//   axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=getPage&area=entretenimento')
+//           .then(function (response) {
+//             // handle success
+//             callback(response);
+//           })
+//           .catch(function (error) {
+//             // handle error
+//             console.log(error);
+//           })
+//         }
+        
+//   const renderData =(array) => {
+//     console.log('fdp', array);
+//     if(!array) return null;
+//     return (
+//       <div>
+//           <p>{array[0].name}</p>
+//       </div>
+//     );
+//   }
+
+//   const handleData = (response) => { 
+//     return response;
+//   }
+
+const getPage = () => {
+  axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=getPage&area=entretenimento')
+    .then(function (response) {
+      // handle success
+      handleData(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+}
+
+const handleData = (response) => {
+  console.log(response);
+  return response;
+}
+
 class Empreendimento extends Component {
-    render() {
+  render() {
+    console.log('1', getPage());
+    console.log('2', getPage());
+    console.log('3', getPage());
     return(
       <div className="Header">
       <Header></Header>
@@ -26,7 +74,6 @@ class Empreendimento extends Component {
           <div class="row">
             <div class="col-sm-12">
               <div class="single-about-us">
-                
               </div>
             </div>
             <div class="col-sm-0">
@@ -37,10 +84,15 @@ class Empreendimento extends Component {
         </div>
       </div>
     </section>
+    <div className="content">
+    <h1>
+    {handleData()}
+    </h1>
+    </div>
     <div className="Footer"><Footer></Footer></div>
     </div>
-
     );
+
 }
 }
 export default Empreendimento;

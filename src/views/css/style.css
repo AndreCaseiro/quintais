@@ -207,10 +207,11 @@ html,body{
     -o-transition:all 0.2s linear;
     transition: all 0.2s linear;
 }
-.main-menu .nav li a{
+.main-menu .nav li a,
+.main-menu .nav li button{
     padding: 11px 0 29px;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
     font-weight:600;
@@ -220,12 +221,17 @@ html,body{
     transition: all 0.25s ease-in-out 0s;
 }
 .main-menu  .nav  li.active a,
+.main-menu .nav li.active button,
 .main-menu  .nav  li a:hover,
-.main-menu .nav  li a:focus{
+.main-menu .nav li button:hover,
+.main-menu .nav  li a:focus,
+.main-menu .nav li button:focus{
+
     color: #00d8ff;
     background-color:transparent;
 }
-.main-menu .nav a:before{
+.main-menu .nav a:before,
+.main-menu .nav button:before{
     position: absolute;
     content: "";
     width: 0px;
@@ -238,14 +244,22 @@ html,body{
     -moz-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    
 }
 .main-menu .nav li.active  a:before,
+.main-menu .nav li.active button:before,
 .main-menu .nav a:hover:before{
     background: #00d8ff;
     width: 100%;
 }
+.main-menu .nav li button{
+background-color:transparent;
+border-color:transparent;
+}
 
+.show>.btn-primary.dropdown-toggle{
+    border:0;
+    outline: 0;
+}
 /*.main-menu*/
 
 /* tooggle */
@@ -1557,5 +1571,37 @@ html,body{
 
 }
 
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  
+
+  .navbar-nav {
+    display: -ms-flexbox;
+    flex-direction: initial!important;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+  }
 
 /*========================Thank you=================*/
