@@ -23,7 +23,7 @@ const routing = (
   <Route exact path="/Alojamento" component={Alojamento} />
   <Route exact path="/Natureza" component={Natureza} />
   <Route exact path="/Reservas" component={Reservas} />
-  <Route exact path="/Empreendimento" component={Empreendimento} />
+  <Route path="/pages/:lang/:area" component={Empreendimento} />
   <Route exact path="/Comodidades" component={Comodidades} />
   <Route exact path="/Localizacao" component={Localizacao} />
   <Route exact path="/VerAlojamento" component={VerAlojamento} />
@@ -31,6 +31,7 @@ const routing = (
   <Route exact path="/Caminho" component={Caminho} />
   <Route exact path="/Galeria" component={Galeria} />
   <Route exact path="/Contactos" component={Contactos} />
+
 
 
 

@@ -25,19 +25,19 @@ class Footer extends Component {
                 </div>
               </div>
           </section>
-            <footer class="footer-copyright">
-                <div class="container">
-                        <div class="foot-icons ">
-                        <ul class="footer-social-links list-inline list-unstyled">
-                                    <li><a href="/#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="/#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="/#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
+            <footer className="footer-copyright">
+                <div className="container">
+                        <div className="foot-icons ">
+                        <ul className="footer-social-links list-inline list-unstyled">
+                                    <li><a href="/#" target="_blank" className="foot-icon-bg-1"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="/#" target="_blank" className="foot-icon-bg-2"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="/#" target="_blank" className="foot-icon-bg-3"><i className="fa fa-instagram"></i></a></li>
                                     </ul>
                                     <p>&copy; 2019 <a href="http://www.quintaisdocaneiro.com">Quintais Do Caneiro</a>. All Right Reserved</p>
 
                             </div>
                         <div id="scroll-Top">
-                        <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+                        <i className="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
                         </div>
                         </div>
                     </footer>

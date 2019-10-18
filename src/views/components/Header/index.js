@@ -17,22 +17,22 @@ class Header extends Component {
     render(){
         return(
             <React.Fragment>
-            <header class="top-area">
-            <div class="header-area">
-                <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                    <div class="logo">
+            <header className="top-area">
+            <div className="header-area">
+                <div className="container">
+                <div className="row">
+                    <div className="col-sm-2">
+                    <div className="logo">
                         <a href="/#"><img src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
                     </div>
                     </div>
-                    <div class="col-sm-10">
-                    <div class="main-menu">
-                        <div class="navbar">
-                            <ul class="nav navbar-nav navbar-right">
+                    <div className="col-sm-10">
+                    <div className="main-menu">
+                        <div className="navbar">
+                            <ul className="nav navbar-nav navbar-right">
                                     <li>
                                     <DropdownButton id="dropdown-basic-button" title="Quintais do Caneiro">
-                                        <Dropdown.Item href="./Empreendimento">Empreendimento</Dropdown.Item>
+                                        <Dropdown.Item href="/pages/pt/empreendimento">Empreendimento</Dropdown.Item>
                                         <Dropdown.Item href="./Galeria">Galeria</Dropdown.Item>
                                     </DropdownButton>
                                         </li>
