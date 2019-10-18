@@ -33,20 +33,20 @@ class Header extends Component {
                                     <li>
                                     <DropdownButton id="dropdown-basic-button" title="Quintais do Caneiro">
                                         <Dropdown.Item href="/pages/pt/empreendimento">Empreendimento</Dropdown.Item>
-                                        <Dropdown.Item href="./Galeria">Galeria</Dropdown.Item>
+                                        <Dropdown.Item href="/Galeria">Galeria</Dropdown.Item>
                                     </DropdownButton>
                                         </li>
                                     <li>
                                     <DropdownButton id="dropdown-basic-button" title="Alojamento">
-                                        <Dropdown.Item href="./Localizacao">A localização</Dropdown.Item>
-                                        <Dropdown.Item href="./Comodidades">Comodidades</Dropdown.Item>
-                                        <Dropdown.Item href="./VerAlojamento">Ver alojamento</Dropdown.Item>
+                                        <Dropdown.Item href="/pages/pt/localizacao">A localização</Dropdown.Item>
+                                        <Dropdown.Item href="/pages/pt/comodidades">Comodidades</Dropdown.Item>
+                                        <Dropdown.Item href="/pages/pt/veralojamento">Ver alojamento</Dropdown.Item>
                                     </DropdownButton>
                                     </li>
                                     <li>
                                         <DropdownButton id="dropdown-basic-button" title="Natureza">
-                                            <Dropdown.Item href="./Atividades">Atividades exteriores</Dropdown.Item>
-                                            <Dropdown.Item href="./Caminho">O Caminho</Dropdown.Item>
+                                            <Dropdown.Item href="/pages/pt/atividades">Atividades exteriores</Dropdown.Item>
+                                            <Dropdown.Item href="/pages/pt/caminho">O Caminho</Dropdown.Item>
                                         </DropdownButton>
                                     </li>
                                     <li>

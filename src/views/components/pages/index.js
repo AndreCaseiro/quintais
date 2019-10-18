@@ -17,7 +17,7 @@ import parse from 'html-react-parser';
 
 const axios = require('axios').default;
 
-class Empreendimento extends Component {
+class Pages extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -78,4 +78,4 @@ class Empreendimento extends Component {
 
 }
 }
-export default Empreendimento;
+export default Pages;
