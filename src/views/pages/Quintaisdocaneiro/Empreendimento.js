@@ -13,6 +13,7 @@ import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
+import parse from 'html-react-parser';
 
 const axios = require('axios').default;
 
@@ -39,38 +40,38 @@ class Empreendimento extends Component {
         }
     }
 
-
   render() {
     const { info } = this.state;
 
     return(
-      <div className="Header">
-      <Header></Header>
-      <section id="home" class="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjp1emnbrovp615jbfhvo.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-      <div class="container">
-        <div class="about-us-content">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="single-about-us">
+      <div className="entretenimento">
+      <div className="Header"><Header></Header>
+      <section id="home" className="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjp1emnbrovp615jbfhvo.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+      <div className="container">
+        <div className="about-us-content">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="single-about-us">
+              <div class="about-us-txt">
+                  <h2>
+                    Empreendimento
+                  </h2>
+                </div>
               </div>
             </div>
-            <div class="col-sm-0">
-              <div class="single-about-us">
+            <div className="col-sm-0">
+              <div className="single-about-us">
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div className="content">
-    <h1>
-    {info && info.map(obj => (
-                <div>
-                <p>{obj.title}</p>
-                <p>{obj.text}</p>
-                </div>
-              ))}
-    </h1>
+    </div>
+    <div className="container mt-5">
+        {info && info.map(obj =>
+          parse(obj.text),
+        )}
     </div>
     <div className="Footer"><Footer></Footer></div>
     </div>
