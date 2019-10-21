@@ -45,8 +45,8 @@ class Header extends Component {
                                     </li>
                                     <li>
                                         <DropdownButton id="dropdown-basic-button" title="Natureza">
-                                            <Dropdown.Item href="/pages/pt/atividades">Atividades exteriores</Dropdown.Item>
-                                            <Dropdown.Item href="/pages/pt/caminho">O Caminho</Dropdown.Item>
+                                            <Dropdown.Item href="/pages/pt/actividades">Atividades exteriores</Dropdown.Item>
+                                            <Dropdown.Item href="/pages/pt/ocaminho">O Caminho</Dropdown.Item>
                                         </DropdownButton>
                                     </li>
                                     <li>

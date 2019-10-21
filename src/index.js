@@ -16,10 +16,6 @@ const routing = (
   <Route exact path="/Galeria" component={Galeria} />
   <Route exact path="/Contactos" component={Contactos} />
 
-
-
-
-
   </Router>
   )
   ReactDOM.render(routing, document.getElementById('root'))

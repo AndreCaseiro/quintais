@@ -39,9 +39,9 @@ class Pages extends Component {
         }
     }
 
-  render() {
+    render() {
     const { info } = this.state;
-
+    
     return(
       <div className="entretenimento">
       <div className="Header"><Header></Header>
@@ -53,7 +53,9 @@ class Pages extends Component {
               <div className="single-about-us">
               <div className="about-us-txt">
                   <h2>
-                    Empreendimento
+                  {info && info.map(obj =>
+                        parse(obj.title),
+                    )}
                   </h2>
                 </div>
               </div>
@@ -68,9 +70,9 @@ class Pages extends Component {
     </section>
     </div>
     <div className="container mt-5">
-        {info && info.map(obj =>
-          parse(obj.text),
-        )}
+    {info && info.map(obj =>
+        parse(obj.text),
+      )}
     </div>
     <div className="Footer"><Footer></Footer></div>
     </div>

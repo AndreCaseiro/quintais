@@ -319,7 +319,7 @@ border-color:transparent;
 	background: url(../../assets/images/home/banner.jpg)no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-height: 1000px;
+	min-height: 500px;
 }
 .about-us:before{
 	position: absolute;
@@ -1604,4 +1604,7 @@ border-color:transparent;
     float: none;
   }
 
+  .dropdown{
+      margin-top: -5px; 
+  }
 /*========================Thank you=================*/
