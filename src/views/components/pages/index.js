@@ -44,6 +44,7 @@ class Pages extends Component {
     
     return(
       <div className="entretenimento">
+
       <div className="Header"><Header></Header>
       <section id="home" className="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjp1emnbrovp615jbfhvo.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
       <div className="container">
@@ -56,6 +57,7 @@ class Pages extends Component {
                   {info && info.map(obj =>
                         parse(obj.title),
                     )}
+                    
                   </h2>
                 </div>
               </div>

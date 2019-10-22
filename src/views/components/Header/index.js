@@ -12,6 +12,9 @@ import "./../../css/style.css";
 import Dropdown from 'react-bootstrap/Dropdown'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import ReactFlagsSelect from 'react-flags-select';
+import 'react-flags-select/css/react-flags-select.css';
+
 
 class Header extends Component {
     render(){
@@ -50,10 +53,17 @@ class Header extends Component {
                                         </DropdownButton>
                                     </li>
                                     <li>
-                                        <Link to="/Contactos">Contactos</Link>
+                                    <Link to="/Reservas">Reservas</Link>
                                     </li>
                                     <li>
-                                        <Link to="/Reservas">Reservas</Link>
+                                    <Link to="/Contactos">Contactos</Link>
+                                    </li>
+                                    <li>
+                                    <ReactFlagsSelect defaultCountry="PT"
+                                        countries={["ES", "GB", "FR", "PT"]}
+                                        showSelectedLabel={false}
+                                        showOptionLabel={false}
+                                    />
                                     </li>
                             </ul>
                         </div>

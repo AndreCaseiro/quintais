@@ -337,11 +337,12 @@ border-color:transparent;
 }
 .about-us h2 {
 	color:#fff;	
-	font-size:84px;
+	font-size:50px;
 	text-transform: inherit;
 	max-width: 800px;
 	font-weight: 600;
-	line-height: 1.22;
+    line-height: 1.22;
+    margin-top:150px
 }
 .about-us h2 span{
 	color:#2bdab5;
@@ -1607,4 +1608,14 @@ border-color:transparent;
   .dropdown{
       margin-top: -5px; 
   }
+
+  .flag-select{
+    color:white!important;
+}
+
+    .flag-select .arrow-down {
+        color:white!important;
+        margin-top:50px;
+    }
+
 /*========================Thank you=================*/
