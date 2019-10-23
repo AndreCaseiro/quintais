@@ -25,7 +25,7 @@ class Pages extends Component {
     };
   }
     componentDidMount(){
-	  this.getAdminContent();
+    this.getAdminContent();
     }
 
     getAdminContent = () => {
@@ -41,7 +41,7 @@ class Pages extends Component {
 
     render() {
     const { info } = this.state;
-    
+
     return(
       <div className="entretenimento">
 
@@ -57,7 +57,6 @@ class Pages extends Component {
                   {info && info.map(obj =>
                         parse(obj.title),
                     )}
-                    
                   </h2>
                 </div>
               </div>

@@ -8,16 +8,20 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Pages from './views/components/pages/index'
 import Galeria from './views/pages/Quintaisdocaneiro/Galeria'
 import Contactos from './views/pages/Contactos/index'
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 
 const routing = (
   <Router>
   <Route exact path="/" component={App} />
-  <Route path="/pages/:lang/:area" component={Pages} />
-  <Route exact path="/Galeria" component={Galeria} />
-  <Route exact path="/Contactos" component={Contactos} />
-
+  <Route path="/:lang/pages/:area" component={Pages} />
+  <Route exact path="/:lang/Galeria" component={Galeria} />
+  <Route exact path="/:lang/Contactos" component={Contactos} />
   </Router>
   )
+
+
+
   ReactDOM.render(routing, document.getElementById('root'))
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
