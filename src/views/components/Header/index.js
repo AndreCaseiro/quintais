@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import ReactDOM from "react-dom";
 import "./../../css/animate.css";
 import "./../../css/bootsnav.css";
 import "./../../css/bootstrap.min.css";
@@ -14,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
-import { strict } from 'assert';
+import { withTranslation, Trans } from 'react-i18next';
 
 class Header extends Component {
     componentDidMount(){
@@ -29,17 +30,17 @@ class Header extends Component {
                     }
                 }
     }
-
-        changeCountry = (lang) =>{
-            this.props.history.replace('/'+lang.toLowerCase()+this.props.location.pathname.substring(3))
+    changeCountry = (lang) => {
+        console.log("lang", lang)
+        this.props.i18n.changeLanguage(lang.toLowerCase());
+        this.props.history.replace('/'+lang.toLowerCase()+this.props.location.pathname.substring(3))
         window.location.reload();
-        }
+    }
 
     render(){
-        const route= this.props.match.params.lang;
-        console.log(this.props);
-        console.log(this.props.match.params)
-        console.log(this.props.match.params.lang)
+        const route= this.props.match.params.lang ? this.props.match.params.lang : "pt";
+
+        const index = 11;
 
         return(
             <React.Fragment>
@@ -49,7 +50,7 @@ class Header extends Component {
                 <div className="row">
                     <div className="col-sm-2">
                     <div className="logo">
-                        <a href="/#"><img src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
+                        <a href={`/${route}`}><img src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
                     </div>
                     </div>
                     <div className="col-sm-10">
@@ -57,40 +58,41 @@ class Header extends Component {
                     <div className="sticky">
                         <div className="navbar"  >
                             <ul className="nav navbar-nav navbar-right">
-                                    <li>
-                                    <DropdownButton id="dropdown-basic-button" title="Quintais do Caneiro">
-                                        <Dropdown.Item href={`${this.props.match.params.lang}/pages/Empreendimento`}>Empreendimento</Dropdown.Item>
-                                        <Dropdown.Item href="/pt/Galeria">Galeria</Dropdown.Item>
+                                <li>
+                                <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Quintais')}>
+                                    <Dropdown.Item href={`/${route}/pages/Empreendimento`}><Trans i18nKey="Empreendimento"></Trans></Dropdown.Item>
+                                    <Dropdown.Item href={`/${route}/Galeria`}><Trans i18nKey="Galeria"></Trans></Dropdown.Item>
+                                </DropdownButton>
+                                    </li>
+                                <li>
+                                <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Alojamento')}>
+                                    <Dropdown.Item href={`/${route}/pages/localizacao`}><Trans i18nKey="Localizacao"></Trans></Dropdown.Item>
+                                    <Dropdown.Item href={`/${route}/pages/comodidades`}><Trans i18nKey="Comodidades"></Trans></Dropdown.Item>
+                                    <Dropdown.Item href={`/${route}/pages/veralojamento`}><Trans i18nKey="Aloja"></Trans></Dropdown.Item>
+                                </DropdownButton>
+                                </li>
+                                <div>{this.props.i18n.language}</div>
+                                <li>
+                                    <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Natureza')}>
+                                        <Dropdown.Item href={`/${route}/pages/actividades`}><Trans i18nKey="AtividadesExterior"></Trans></Dropdown.Item>
+                                        <Dropdown.Item href={`/${route}/pages/ocaminho`}><Trans i18nKey="Caminho"></Trans></Dropdown.Item>
                                     </DropdownButton>
-                                        </li>
-                                    <li>
-                                    <DropdownButton id="dropdown-basic-button" title="Alojamento">
-                                        <Dropdown.Item href="/pt/pages/localizacao">A localização</Dropdown.Item>
-                                        <Dropdown.Item href="/pt/pages/comodidades">Comodidades</Dropdown.Item>
-                                        <Dropdown.Item href="/pt/pages/veralojamento">Ver alojamento</Dropdown.Item>
-                                    </DropdownButton>
-                                    </li>
-                                    <li>
-                                        <DropdownButton id="dropdown-basic-button" title="Natureza">
-                                            <Dropdown.Item href="/pages/pt/actividades">Atividades exteriores</Dropdown.Item>
-                                            <Dropdown.Item href="/pages/pt/ocaminho">O Caminho</Dropdown.Item>
-                                        </DropdownButton>
-                                    </li>
-                                    <li>
-                                    <Link to="/Reservas">Reservas</Link>
-                                    </li>
-                                    <li>
-                                    <Link to="/Contactos">Contactos</Link>
-                                    </li>
-                                    <li>
-                                    <ReactFlagsSelect
-                                        defaultCountry={this.props.match.params.lang ? this.props.match.params.lang.toUpperCase() : 'PT'}
-                                        countries={["ES", "GB", "FR", "PT"]}
-                                        showSelectedLabel={false}
-                                        showOptionLabel={false}
-                                        onSelect={this.changeCountry}
-                                    />
-                                    </li>
+                                </li>
+                                <li>
+                                <Link to={`/${route}/pages/Reservas`}><Trans i18nKey="Reservas"></Trans></Link>
+                                </li>
+                                <li>
+                                <Link to={`/${route}/Contactos`}><Trans i18nKey="Contactos"></Trans></Link>
+                                </li>
+                                <li>
+                                <ReactFlagsSelect
+                                    defaultCountry={route.toUpperCase()}
+                                    countries={["ES", "GB", "FR", "PT"]}
+                                    showSelectedLabel={false}
+                                    showOptionLabel={false}
+                                    onSelect={this.changeCountry}
+                                />
+                                </li>
                             </ul>
                         </div>
                         </div>
@@ -104,4 +106,4 @@ class Header extends Component {
         );
     }
 }
-export default withRouter(Header);
+export default withTranslation('translation')(withRouter(Header));

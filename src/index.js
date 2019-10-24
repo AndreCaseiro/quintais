@@ -8,12 +8,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Pages from './views/components/pages/index'
 import Galeria from './views/pages/Quintaisdocaneiro/Galeria'
 import Contactos from './views/pages/Contactos/index'
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n";
+import "./i18n";
 
 const routing = (
   <Router>
   <Route exact path="/" component={App} />
+  <Route exact path="/:lang" component={App} />
   <Route path="/:lang/pages/:area" component={Pages} />
   <Route exact path="/:lang/Galeria" component={Galeria} />
   <Route exact path="/:lang/Contactos" component={Contactos} />
