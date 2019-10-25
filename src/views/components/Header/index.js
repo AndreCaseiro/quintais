@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import ReactDOM from "react-dom";
 import "./../../css/animate.css";
 import "./../../css/bootsnav.css";
 import "./../../css/bootstrap.min.css";
@@ -39,9 +38,6 @@ class Header extends Component {
 
     render(){
         const route= this.props.match.params.lang ? this.props.match.params.lang : "pt";
-
-        const index = 11;
-
         return(
             <React.Fragment>
             <header className="top-area">
@@ -79,10 +75,10 @@ class Header extends Component {
                                     </DropdownButton>
                                 </li>
                                 <li>
-                                <Link to={`/${route}/pages/Reservas`}><Trans i18nKey="Reservas"></Trans></Link>
+                                <Link to={`/${route}/pages/reservas`}><Trans i18nKey="Reservas"></Trans></Link>
                                 </li>
                                 <li>
-                                <Link to={`/${route}/Contactos`}><Trans i18nKey="Contactos"></Trans></Link>
+                                <Link to={`/${route}/contactos`}><Trans i18nKey="Contactos"></Trans></Link>
                                 </li>
                                 <li>
                                 <ReactFlagsSelect

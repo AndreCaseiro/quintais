@@ -14,6 +14,7 @@ import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import parse from 'html-react-parser';
+import Reservas from "./../../pages/Reservas"
 
 const axios = require('axios').default;
 
@@ -69,6 +70,7 @@ class Pages extends Component {
         </div>
       </div>
     </section>
+    {this.props.match.params.area === 'reservas' && <Reservas></Reservas>}
     </div>
     <div className="container mt-5">
     {info && info.map(obj =>

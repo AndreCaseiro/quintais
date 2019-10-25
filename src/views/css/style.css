@@ -380,6 +380,7 @@ border-color:transparent;
     -ms-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+    margin: 0 auto;
 }
 .about-btn:hover .about-view{
     color: #fff;
@@ -457,6 +458,20 @@ border-color:transparent;
 .desc-tabs .nav-tabs>li>a>i{
 	padding-right: 6px;
 }
+.email-check-icon:after {
+    position: absolute;
+    content: "\f1fa";
+    right: 0px;
+    top: 0;
+    font-size: 18px;
+    color: #aaa;
+    background: #f9f9f9;
+    font-family: "fontAwesome";
+    pointer-events: none;
+    border: 1px solid #d7d7d7;
+    border-bottom: transparent;
+    padding: 10px 8px;
+}
 /* .desc-tabs */
 
 
@@ -491,6 +506,7 @@ border-color:transparent;
     padding: 10px;
 }
 
+.email-check-icon,
 .travel-check-icon{
     position: relative;
 }
@@ -509,7 +525,9 @@ border-color:transparent;
     padding: 10px 8px;
 }/*travel-select-icon*/
 
-.travel-select-icon  select,.travel-check-icon  input {
+.travel-select-icon  select,
+.travel-check-icon  input,
+.email-check-icon input {
 	color:#aaa;
 	font-size:14px;
 	font-family: 'Poppins', sans-serif;
@@ -659,8 +677,8 @@ border-color:transparent;
 
 /* .travel-btn */
 .about-view.travel-btn{
-	width: 180px;
-	margin-right: 15px;
+    width: 180px;
+    float:right!important;
 }
 
 /*-------------------------------------
@@ -1623,11 +1641,18 @@ border-color:transparent;
         margin-top:50px;
     }
 
-
-
     .sticky{
         position:fixed;
         top: 10px;
     }
-
+    .spanrnt{
+        font: size 12px!important;
+    }
+    textarea.form-control{
+        height: 150px!important;
+    }
+    .contactForm .form-control{
+        height:34px;
+        font-size:16px;
+    }
 /*========================Thank you=================*/
