@@ -146,7 +146,7 @@ html,body{
 .header-area{
     position:fixed;
     top: 0;
-    width: 100%;
+    width: 140%;
     height: 76px;
 }
 
@@ -214,7 +214,7 @@ html,body{
 .main-menu .nav li button{
     padding: 11px 0 29px;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
     font-weight:600;
@@ -1654,5 +1654,8 @@ border-color:transparent;
     .contactForm .form-control{
         height:34px;
         font-size:16px;
+    }
+    .logoquintais{
+        width: 75%;
     }
 /*========================Thank you=================*/

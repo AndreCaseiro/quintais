@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./../../css/style.css";
 import Footer from './../../components/Footer/index';
 import Header from './../../components/Header/index';
+import { withTranslation, Trans } from 'react-i18next';
 
   class App extends Component {
 
@@ -35,11 +36,15 @@ import Header from './../../components/Header/index';
 			<div class="container">
 				<div class="gallery-details">
 					<div class="gallary-header text-center">
-						<h2>
+						<h2 class="t1">
+						<Trans i18nKey="t1">
 							top destination
+							</Trans>
 						</h2>
 						<p>
+						<Trans i18nKey="t2">
 							Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
+							</Trans>
 						</p>
 					</div>
 					<div class="gallery-box">
@@ -130,7 +135,9 @@ import Header from './../../components/Header/index';
 				<div class="blog-details">
 						<div class="gallary-header text-center">
 							<h2>
+							<Trans i18nKey="t3">
 								latest news
+								</Trans>
 							</h2>
 							<p>
 								Travel News from all over the world 

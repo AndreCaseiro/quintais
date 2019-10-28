@@ -21,6 +21,10 @@ i18n
                     "Caminho": "O Caminho",
                     "Reservas": "Reservas",
                     "Contactos": "Contactos",
+                    "t1": "Aqui perto",
+                    "t2": "Conheça os lugares perto dos Quintais do Caneiro",
+                    "t3": "Notícias mais recentes",
+
                 }
             },
             es:{
@@ -37,6 +41,10 @@ i18n
                     "Caminho": "El camino",
                     "Reservas": "Reservaciones",
                     "Contactos": "Contactos",
+                    "t1": "Cerca de Quintais do Caneiro",
+                    "t2": "Conoce los lugares cercanos a la Quintais do Caneiro",
+                    "t3": "Últimas noticias",
+
                 }
             },
             gb:{
@@ -53,6 +61,9 @@ i18n
                     "Caminho": "The way",
                     "Reservas": "Reservations",
                     "Contactos": "Contacts",
+                    "t1": "Near Quintais do Caneiro",
+                    "t2": "Know the best places near the Quintais do Caneiro",
+                    "t3": "Latest news",
                 }
             }
         },

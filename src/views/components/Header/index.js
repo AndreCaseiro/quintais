@@ -46,7 +46,7 @@ class Header extends Component {
                 <div className="row">
                     <div className="col-sm-2">
                     <div className="logo">
-                        <a href={`/${route}`}><img src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
+                        <a href={`/${route}`}><img className="logoquintais" src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
                     </div>
                     </div>
                     <div className="col-sm-10">

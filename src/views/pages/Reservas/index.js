@@ -12,6 +12,9 @@ import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { Form } from 'reactstrap'
+import SweetAlert from 'sweetalert-react';
+import 'sweetalert/dist/sweetalert.css';
+
 const axios = require('axios').default;
 
     class Reservas extends Component {
@@ -22,6 +25,7 @@ const axios = require('axios').default;
             children: '',
             email: '',
             info: '',
+            show: false,
         }
         handleSubmit(e) {
             e.preventDefault()
@@ -29,13 +33,9 @@ const axios = require('axios').default;
                     axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=bookNow&check_in='+this.state.check_in + '&check_out='+this.state.check_out + '&adults=' +this.state.adults + '&children=' +this.state.children + '&email=' +this.state.email)
                     .then((response) => {
                         this.setState({
-                            info: Object.values(response.data),
+                            info:{response}
                         })
                         })
-                        if(this.state.info === 1){
-                            alert('OBRIGADO')
-                        window.location.reload();
-                        }
                     }
                 this.resetForm()
             }
@@ -52,6 +52,9 @@ const axios = require('axios').default;
         handleChange = (param, e) => {
             this.setState({ [param]: e.target.value })
         }
+        hiddenAlert = () => {
+            this.setState({ show: false });
+        };
         render() {
         return(
         <div className="Reservas">
@@ -124,7 +127,13 @@ const axios = require('axios').default;
                                                     <div class="row">
                                                         <div>
                                                             <div className="about-btn travel-mrt-0 pull-right" type="submit">
-                                                                <button class="about-view travel-btn"> Ver Disponibilidade </button>
+                                                                <button class="about-view travel-btn" onClick={() => this.state.info !==  "" ? this.setState({ show: true }) : this.setState({ show: false })}> Ver Disponibilidade </button>
+                                                                <SweetAlert
+                                                                    show={this.state.show}
+                                                                    title="Sucesso"
+                                                                    text="Obrigado por nos contactar"
+                                                                    onConfirm={this.hiddenAlert}
+                                                                />
                                                             </div>
                                                         </div>
                                                     </div>
