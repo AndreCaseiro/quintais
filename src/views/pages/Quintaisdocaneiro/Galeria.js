@@ -14,12 +14,32 @@ import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
-import Image1 from "./../../css/images/service/s1.jpg";
-import Image2 from "./../../css/images/service/s2.png";
-import Image3 from "./../../css/images/service/s3.png";
+
+const axios = require('axios').default;
 
 class Galeria extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      info: null,
+      value: 0,
+    }
+  }
+  onChange = value => this.setState({ value });
+
+  componentDidMount(){
+    this.getAdminContent();
+    }
+    getAdminContent = () =>{
+      axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=getGallery')
+      .then((response) => {
+        this.setState({
+          info: Object.values(response.data),
+        })
+      })
+    }
     render() {
+      const { info } = this.state;
     return(
       <div className="Header">
       <Header></Header>
@@ -39,14 +59,12 @@ class Galeria extends Component {
         </div>
       </div>
     </section>
-    <div
-          className="App"
-          style={{ width: "600px", margin: "auto", padding: "50px" }}
-                >
-          <Carousel animationSpeed={1500} autoPlay={1000} arrows Infinite>
-            <img alt="Image1" src={Image1} />
-            <img alt="Image2" src={Image2} />
-            <img alt="Image3" src={Image3} />
+    
+    <div className="App" style={{ width: "600px", margin: "auto", padding: "50px" }}>
+          <Carousel autoPlay={2000} arrows infinite>
+          {info && info.map(obj => (
+      <img alt="Image1" src={obj.img} />
+    ))}
           </Carousel>
           </div>
     <div className="Footer"><Footer></Footer></div>

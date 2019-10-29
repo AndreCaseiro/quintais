@@ -30,8 +30,8 @@ class Footer extends Component {
                         <div className="foot-icons ">
                         <ul className="footer-social-links list-inline list-unstyled">
                         <li><a href="https://www.facebook.com/Quintais-do-Caneiro-112018890219789" target="_blank" rel="noopener noreferrer" className="foot-icon-bg-1"><i className="fa fa-facebook"></i></a></li>
-                                   {/*<li><a href="/#" target="_blank" className="foot-icon-bg-2"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="/#" target="_blank" className="foot-icon-bg-3"><i className="fa fa-instagram"></i></a></li>*/}
+                                    {/*<li><a href="/#" target="_blank" className="foot-icon-bg-2"><i className="fa fa-twitter"></i></a></li>*/}
+                                    <li><a href="https://www.instagram.com/quintaisdocaneiro/?hl=pt" target="_blank" rel="noopener noreferrer" className="foot-icon-bg-3"><i className="fa fa-instagram"></i></a></li>
                                     </ul>
                                     <p>&copy; 2019 <a href="http://www.quintaisdocaneiro.com">Quintais Do Caneiro</a>. All Right Reserved</p>
 

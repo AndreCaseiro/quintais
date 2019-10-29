@@ -14,6 +14,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { Form } from 'reactstrap'
 import SweetAlert from 'sweetalert-react';
 import 'sweetalert/dist/sweetalert.css';
+import { Trans } from 'react-i18next';
 
 const axios = require('axios').default;
 
@@ -71,7 +72,7 @@ const axios = require('axios').default;
                                                     <div class="row">
                                                         <div class="col-lg-2 col-md-3 col-sm-4">
                                                             <div class="single-tab-select-box">
-                                                                <h2 >Data Entrada</h2>
+                                                                <h2><Trans i18nKey="dataentrada">Data Entrada</Trans></h2>
                                                                 <div class="travel-check-icon">
                                                                     <input class="form-control" mask="00-00-0000" name="check_in" placeholder="12-08-2019" type="text" value={this.state.check_in} onChange={this.handleChange.bind(this, 'check_in')} required ></input>
                                                                 </div>
@@ -80,7 +81,7 @@ const axios = require('axios').default;
 
                                                         <div class="col-lg-2 col-md-3 col-sm-4">
                                                             <div class="single-tab-select-box">
-                                                                <h2 >Data Saída</h2>
+                                                                <h2><Trans i18nKey="datasaida">Data Saída</Trans></h2>
                                                                 <div class="travel-check-icon">
                                                                     <input class="form-control" mask="00-00-0000" name="check_out" placeholder="22-08-2019" type="text" value={this.state.check_out} onChange={this.handleChange.bind(this, 'check_out')} required ></input>
                                                                 </div>
@@ -89,7 +90,7 @@ const axios = require('axios').default;
 
                                                         <div class="col-lg-2 col-md-1 col-sm-4">
                                                             <div class="single-tab-select-box">
-                                                                <h2 >Adultos</h2>
+                                                                <h2><Trans i18nKey="adultos">Adultos</Trans></h2>
                                                                 <div class="travel-select-icon">
                                                                     <select class="form-control" name="adults" value={this.state.adults} onChange={this.handleChange.bind(this, 'adults')} required >
                                                                         <option selected="selected" value="1">1</option>
@@ -102,7 +103,7 @@ const axios = require('axios').default;
 
                                                         <div class="col-lg-2 col-md-1 col-sm-4">
                                                             <div class="single-tab-select-box">
-                                                                <h2 >Crianças</h2>
+                                                                <h2><Trans i18nKey="crianças">Crianças</Trans></h2>
                                                                 <div class="travel-select-icon">
                                                                     <select class="form-control" name="children" value={this.state.children} onChange={this.handleChange.bind(this, 'children')} required >
                                                                         <option selected="selected" value="0">0</option>
@@ -116,7 +117,7 @@ const axios = require('axios').default;
 
                                                         <div class="col-lg-3 col-md-3 col-sm-4">
                                                             <div class="single-tab-select-box">
-                                                                <h2 >Email</h2>
+                                                                <h2><Trans i18nKey="email">Email</Trans></h2>
                                                                 <div class="email-check-icon">
                                                                     <input class="form-control" name="email" placeholder="email@email.com" type="email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} required ></input>
                                                             </div>

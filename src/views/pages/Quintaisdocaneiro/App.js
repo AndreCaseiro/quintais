@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import "./../../css/style.css";
 import Footer from './../../components/Footer/index';
 import Header from './../../components/Header/index';
-import { withTranslation, Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
+import portao from "./../../css/images/images/portao.jpg"
+import fora from "./../../css/images/images/fora.jpg"
+import vista from "./../../css/images/images/vista.jpg"
+import interior2 from "./../../css/images/images/interior2.jpg"
+import interior from "./../../css/images/images/interior.jpg"
+import interior3 from "./../../css/images/images/interior3.jpg"
+
+
+const sectionStyle = {
+	backgroundImage: `url(${portao})`,
+	backgroundRepeat: "no-repeat",
+	backgroundSize: "cover"
+}
 
   class App extends Component {
 
@@ -11,8 +24,8 @@ import { withTranslation, Trans } from 'react-i18next';
           <div className="App">
           <div className="Natureza">
             <div className="Header">
-          <Header></Header>
-          <section id="home" class="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjo1d5f1f9i4bc1kqqapmg.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+          <Header/>
+          <section id="home" class="about-us" style={sectionStyle}>
           <div class="container">
             <div class="about-us-content">
               <div class="row">
@@ -51,67 +64,32 @@ import { withTranslation, Trans } from 'react-i18next';
 						<div class="gallery-content">
 						  	<div class="filtr-container">
 						  		<div class="row">
-
 						  			<div class="col-md-6">
 						  				<div class="filtr-item">
-											<img src="http://quintaisdocaneiro.com/assets/images/gallery-images/gallery-image-1.jpg" alt="portfolio "/>
-											<div class="item-title">
-												<a href="/">
-													china
-												</a>
-												<p><span>20 tours</span><span>15 places</span></p>
-											</div>
+											<img src={fora} alt="Casa fora"/>
 										</div>
 						  			</div>
-
 						  			<div class="col-md-6">
 						  				<div class="filtr-item">
-											<img src="http://quintaisdocaneiro.com/assets/images/gallery-images/gallery-image-2.jpg" alt="portfolffffio "/>
-											<div class="item-title">
-												<a href="/">
-													venuzuala
-												</a>
-												<p><span>12 tours</span><span>9 places</span></p>
-											</div> 
+											<img src={interior3} alt="vista "/>
 										</div>
 						  			</div>
-                		<div class="col-md-4">
+                					<div class="col-md-4">
 						  				<div class="filtr-item">
-											<img src="http://quintaisdocaneiro.com/assets/images/gallery-images/gallery-image-6.jpg" alt="portfolio "/>
-											<div class="item-title">
-												<a href="/">
-													brazil
-												</a>
-												<p><span>25 tours</span><span>10 places</span></p>
-											</div>
+											<img src={interior} alt="vista 1"/>
 										</div>
-						  			</div>
-
-						  			<div class="col-md-4">
-						  				<div class="filtr-item">
-											<img src="http://quintaisdocaneiro.com/assets/images/gallery-images/gallery-image-5.jpg" alt="portfolio "/>
-											<div class="item-title">
-												<a href="/">
-													australia 
-												</a>
-												<p><span>18 tours</span><span>9 places</span></p>
-											</div> 
+					  				</div>
+									<div class="col-md-4">
+										<div class="filtr-item">
+											<img src={interior2} alt="interior "/>
 										</div>
-						  			</div>
-
-						  			<div class="col-md-4">
-						  				<div class="filtr-item">
-											<img src="http://quintaisdocaneiro.com/assets/images/gallery-images/gallery-image-4.jpg" alt="portfolio "/>
-											<div class="item-title">
-												<a href="/">
-													netharland
-												</a>
-												<p><span>14 tours</span><span>12 places</span></p>
-											</div>
+									</div>
+									<div class="col-md-4">
+										<div class="filtr-item">
+											<img src={vista} alt="fora 1 "/>
 										</div>
-						  			</div>
+									</div>
 						  		</div>
-
 						  	</div>
 						</div>
 					</div>
@@ -140,7 +118,9 @@ import { withTranslation, Trans } from 'react-i18next';
 								</Trans>
 							</h2>
 							<p>
+							<Trans i18nKey="t4">
 								Travel News from all over the world 
+								</Trans>
 							</p>
 						</div>
 						<div class="blog-content">

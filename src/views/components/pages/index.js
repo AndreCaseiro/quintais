@@ -15,9 +15,15 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import parse from 'html-react-parser';
 import Reservas from "./../../pages/Reservas"
+import empreendimento from "./../../css/images/images/empreendimento.jpg"
 
 const axios = require('axios').default;
 
+const sectionStyle = {
+	backgroundImage: `url(${empreendimento})`,
+	backgroundRepeat: "no-repeat",
+	backgroundSize: "cover"
+}
 class Pages extends Component {
   constructor(props) {
     super(props)
@@ -47,7 +53,7 @@ class Pages extends Component {
       <div className="entretenimento">
 
       <div className="Header"><Header></Header>
-      <section id="home" className="about-us" style={{backgroundImage: "url(http://quintaisdocaneiro.com/assets/images/pages/p1den10pjp1emnbrovp615jbfhvo.JPG)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+      <section id="home" className="about-us" style={sectionStyle}>
       <div className="container">
         <div className="about-us-content">
           <div className="row">
