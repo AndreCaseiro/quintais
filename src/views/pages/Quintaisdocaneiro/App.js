@@ -9,7 +9,9 @@ import vista from "./../../css/images/images/vista.jpg"
 import interior2 from "./../../css/images/images/interior2.jpg"
 import interior from "./../../css/images/images/interior.jpg"
 import interior3 from "./../../css/images/images/interior3.jpg"
+import parse from 'html-react-parser';
 
+const axios = require('axios').default;
 
 const sectionStyle = {
 	backgroundImage: `url(${portao})`,
@@ -17,11 +19,32 @@ const sectionStyle = {
 	backgroundSize: "cover"
 }
 
-  class App extends Component {
+class App extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+		  info: null,
+		}
+	  }
+
+	  componentDidMount(){
+		this.getAdminContent();
+		}
+		getAdminContent = () =>{
+			axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=getNews')
+			.then((response) => {
+			  this.setState({
+				info: Object.values(response.data),
+			  })
+			  debugger
+			})
+		}
 
     render(){
+		const { info } = this.state;
+
         return (
-          <div className="App">
+          <div className="App">	
           <div className="Natureza">
             <div className="Header">
           <Header/>
@@ -128,24 +151,20 @@ const sectionStyle = {
 
 								<div class="col-sm-4 col-md-4">
 									<div class="thumbnail">
-										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
-											<img src="http://quintaisdocaneiro.com/assets/images/news/thumbs370/p1d9imp68q1v6v18e61on912fqned4.jpg" alt="blog"></img>
+											<img src="https://spark.adobe.com/page/Chrxj/embed.jpg" alt="blog"></img>
 											<div class="thumbnail-img-overlay"></div>
-										
 										</div>
-									  
 										<div class="caption">
 											<div class="blog-txt">
 												<h3>
-													<a href="/">
-														Discover on beautiful weather, Fantastic foods and historical place in Prag
+													<a href="http://www.cm-mirandadocorvo.pt/pt/Default.aspx">
+														Descubra a linda cidade de Miranda do Corvo!
 													</a>
 												</h3>
 												<p>
 													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
 												</p>
-												<a href="/">Read More</a>
 											</div>
 										</div>
 									</div>
@@ -154,23 +173,26 @@ const sectionStyle = {
 
 								<div class="col-sm-4 col-md-4">
 									<div class="thumbnail">
-										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
-											<img src="http://quintaisdocaneiro.com/assets/images/news/thumbs370/p1d9iuq4ha2v11eg519qirls1uel4.jpg" alt="blog"></img>
+											{info && info.map(obj => (
+												<img alt="blog" src={obj.img} />
+												))}
 											<div class="thumbnail-img-overlay"></div>
-										
 										</div>
 										<div class="caption">
 											<div class="blog-txt">
 												<h3>
 													<a href="/">
-														Discover on beautiful weather, Fantastic foods and historical place in india
+													{info && info.map(obj =>
+														parse(obj.title),
+													)}
 													</a>
 												</h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+												{info && info.map(obj =>
+													parse(obj.text),
+												)}
 												</p>
-												<a href="/">Read More</a>
 											</div>
 										</div>
 									</div>
@@ -179,11 +201,9 @@ const sectionStyle = {
 
 								<div class="col-sm-4 col-md-4">
 									<div class="thumbnail">
-										<h2>trending news <span>15 november 2017</span></h2>
 										<div class="thumbnail-img">
 											<img src="http://quintaisdocaneiro.com/assets/images/news/thumbs370/p1d9iv245g8bl13ren9h1j4g13a34.jpg" alt="blog"></img>
 											<div class="thumbnail-img-overlay"></div>
-										
 										</div>
 										<div class="caption">
 											<div class="blog-txt">
@@ -191,7 +211,6 @@ const sectionStyle = {
 												<p>
 													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
 												</p>
-												<a href="/">Read More</a>
 											</div>
 										</div>
 									</div>

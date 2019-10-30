@@ -319,7 +319,6 @@ border-color:transparent;
     justify-content: center;
     align-items: center;
 	position: relative;
-	background: url(../../assets/images/home/banner.jpg)no-repeat;
 	background-size: cover;
 	background-position: center;
 	min-height: 500px;
@@ -1086,7 +1085,6 @@ border-color:transparent;
 --------------------------------------*/
 .special-offer{
     position: relative;
-    background: url(../../assets/images/offer/offer-banner.jpg)no-repeat center;
     background-size: cover;
     z-index: 1;
 }

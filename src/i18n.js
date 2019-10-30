@@ -31,6 +31,7 @@ i18n
                     "crianças": "Crianças",
                     "email": "Email",
                     "mais": "Mais",
+                    "disponibilidade": "Ver disponibilidade",
                 }
             },
             es:{
@@ -57,6 +58,7 @@ i18n
                     "crianças": "Niños",
                     "email": "Email",
                     "mais": "más",
+                    "disponibilidade": "Ver disponibilidad",
                 }
             },
             fr:{
@@ -73,12 +75,17 @@ i18n
                     "Caminho": "El camino",
                     "Reservas": "Les Réservations",
                     "Contactos": "Les Contacts",
+                    "t1": "Près d'ici",
+                    "t2": "Connaître les lieux près du Quintais do Caneiro",
+                    "t3": "Dernières nouvelles",
+                    "t4": "Nouvelles du monde entier",
                     "dataentrada": "Date d'entrée",
                     "datasaida": "Date de départ",
                     "adultos": "Les adultes",
                     "crianças": "Les enfants",
                     "email": "Email",
                     "mais": "Plus",
+                    "disponibilidade": "Voir disponibilité",
                 }
             },
             gb:{
@@ -105,6 +112,7 @@ i18n
                     "crianças": "Children",
                     "email": "Email",
                     "mais": "More",
+                    "disponibilidade": "See availability",
                 }
             }
         },

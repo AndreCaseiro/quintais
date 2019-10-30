@@ -128,7 +128,7 @@ const axios = require('axios').default;
                                                     <div class="row">
                                                         <div>
                                                             <div className="about-btn travel-mrt-0 pull-right" type="submit">
-                                                                <button class="about-view travel-btn" onClick={() => this.state.info !==  "" ? this.setState({ show: true }) : this.setState({ show: false })}> Ver Disponibilidade </button>
+                                                                <button class="about-view travel-btn" onClick={() => this.state.info !==  "" ? this.setState({ show: true }) : this.setState({ show: false })}><Trans i18nKey="disponibilidade"></Trans></button>
                                                                 <SweetAlert
                                                                     show={this.state.show}
                                                                     title="Sucesso"
