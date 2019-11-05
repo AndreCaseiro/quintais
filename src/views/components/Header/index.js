@@ -67,7 +67,6 @@ class Header extends Component {
                                     <Dropdown.Item href={`/${route}/pages/veralojamento`}><Trans i18nKey="Aloja"></Trans></Dropdown.Item>
                                 </DropdownButton>
                                 </li>
-                                <div>{this.props.i18n.language}</div>
                                 <li>
                                     <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Natureza')}>
                                         <Dropdown.Item href={`/${route}/pages/actividades`}><Trans i18nKey="AtividadesExterior"></Trans></Dropdown.Item>

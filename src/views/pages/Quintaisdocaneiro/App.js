@@ -3,7 +3,7 @@ import "./../../css/style.css";
 import Footer from './../../components/Footer/index';
 import Header from './../../components/Header/index';
 import { Trans } from 'react-i18next';
-import portao from "./../../css/images/images/portao.jpg"
+import vista2 from "./../../css/images/images/vista2.jpg"
 import fora from "./../../css/images/images/fora.jpg"
 import vista from "./../../css/images/images/vista.jpg"
 import interior2 from "./../../css/images/images/interior2.jpg"
@@ -11,7 +11,7 @@ import interior from "./../../css/images/images/interior.jpg"
 import interior3 from "./../../css/images/images/interior3.jpg"
 
 const sectionStyle = {
-	backgroundImage: `url(${portao})`,
+	backgroundImage: `url(${vista2})`,
 	backgroundRepeat: "no-repeat",
 	backgroundSize: "cover"
 }

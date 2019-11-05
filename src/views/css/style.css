@@ -318,10 +318,11 @@ border-color:transparent;
 	display: flex;
     justify-content: center;
     align-items: center;
-	position: relative;
+    position: relative;
 	background-size: cover;
 	background-position: center;
-	min-height: 500px;
+    min-height: 500px;
+    width: 100%;
 }
 .about-us:before{
 	position: absolute;
@@ -1243,11 +1244,14 @@ border-color:transparent;
 .thumbnail-img{
     position:relative;
     text-align: center;
+    max-height:200px;
 }
 
 .blog-content .thumbnail .thumbnail-img  img{
+    width:350px;
     max-width: 102%;
     margin-left: -4px;
+    height:210px;
 }
 .thumbnail-img-overlay{
     position:absolute;

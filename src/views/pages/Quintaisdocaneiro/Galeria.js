@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Carousel from "@brainhubeu/react-carousel";
+import Carousel, { Dots } from "@brainhubeu/react-carousel";
 import '../../components/Footer/index'
 import '../../components/Header/index'
 import Footer from '../../components/Footer/index';
@@ -14,6 +14,7 @@ import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
+import { Icon } from 'react-fa';
 
 const axios = require('axios').default;
 
@@ -61,7 +62,11 @@ class Galeria extends Component {
     </section>
     
     <div className="App" style={{ width: "600px", margin: "auto", padding: "50px" }}>
-          <Carousel autoPlay={2000} arrows infinite>
+          <Carousel 
+                arrowLeft={<Icon name="angle-double-left" />}
+          arrowRight={<Icon name="angle-double-right" />}
+          addArrowClickHandler
+          infinite>
           {info && info.map(obj => (
       <img alt="Image1" src={obj.img} />
     ))}
