@@ -1240,7 +1240,10 @@ border-color:transparent;
 }
 
 /*.thumbnail-img*/
-.thumbnail-img{position:relative;}
+.thumbnail-img{
+    position:relative;
+    text-align: center;
+}
 
 .blog-content .thumbnail .thumbnail-img  img{
     max-width: 102%;
@@ -1660,5 +1663,8 @@ border-color:transparent;
     .BrainhubCarousel__arrows{
         background-color:grey!important;
         opacity: 0.3;
+    }
+    .thumbImage{
+        max-height: 207px;
     }
 /*========================Thank you=================*/

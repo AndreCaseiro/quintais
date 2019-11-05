@@ -32,6 +32,11 @@ i18n
                     "email": "Email",
                     "mais": "Mais",
                     "disponibilidade": "Ver disponibilidade",
+                    "c1": "Telefone: ",
+                    "c2": "Telemóvel: ",
+                    "c5": "Morada: ",
+                    "Contactus": "CONTACTE-NOS",
+                    "placeh1": "asdasd",
                 }
             },
             es:{
@@ -59,6 +64,10 @@ i18n
                     "email": "Email",
                     "mais": "más",
                     "disponibilidade": "Ver disponibilidad",
+                    "c1": "Número de teléfono: ",
+                    "c2": "Teléfono móvil: ",
+                    "c5": "Dirección: ",
+                    "Contactus": "CONTÁCTE-NOS",
                 }
             },
             fr:{
@@ -86,6 +95,10 @@ i18n
                     "email": "Email",
                     "mais": "Plus",
                     "disponibilidade": "Voir disponibilité",
+                    "c1": "Numéro de téléphone: ",
+                    "c2": "Téléphone portable: ",
+                    "c5": "Adresse: ",
+                    "Contactus": "CONTACTEZ-NOUS",
                 }
             },
             gb:{
@@ -113,6 +126,10 @@ i18n
                     "email": "Email",
                     "mais": "More",
                     "disponibilidade": "See availability",
+                    "c1": "Telephone: ",
+                    "c2": "Mobile Phone: ",
+                    "c5": "Address: ",
+                    "Contactus": "CONTACT-US",
                 }
             }
         },

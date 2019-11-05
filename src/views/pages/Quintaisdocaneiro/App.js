@@ -9,9 +9,6 @@ import vista from "./../../css/images/images/vista.jpg"
 import interior2 from "./../../css/images/images/interior2.jpg"
 import interior from "./../../css/images/images/interior.jpg"
 import interior3 from "./../../css/images/images/interior3.jpg"
-import parse from 'html-react-parser';
-
-const axios = require('axios').default;
 
 const sectionStyle = {
 	backgroundImage: `url(${portao})`,
@@ -20,31 +17,9 @@ const sectionStyle = {
 }
 
 class App extends Component {
-	constructor(props){
-		super(props)
-		this.state = {
-		  info: null,
-		}
-	  }
-
-	  componentDidMount(){
-		this.getAdminContent();
-		}
-		getAdminContent = () =>{
-			axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=getNews')
-			.then((response) => {
-			  this.setState({
-				info: Object.values(response.data),
-			  })
-			  debugger
-			})
-		}
-
     render(){
-		const { info } = this.state;
-
         return (
-          <div className="App">	
+          <div className="App">
           <div className="Natureza">
             <div className="Header">
           <Header/>
@@ -136,12 +111,12 @@ class App extends Component {
 				<div class="blog-details">
 						<div class="gallary-header text-center">
 							<h2>
-							<Trans i18nKey="t3">
+							<Trans i18nKey="t1">
 								latest news
 								</Trans>
 							</h2>
 							<p>
-							<Trans i18nKey="t4">
+							<Trans i18nKey="t2">
 								Travel News from all over the world 
 								</Trans>
 							</p>
@@ -152,14 +127,14 @@ class App extends Component {
 								<div class="col-sm-4 col-md-4">
 									<div class="thumbnail">
 										<div class="thumbnail-img">
-											<img src="https://spark.adobe.com/page/Chrxj/embed.jpg" alt="blog"></img>
+											<img src="https://spark.adobe.com/page/Chrxj/embed.jpg" alt="blog" className="thumbImage"></img>
 											<div class="thumbnail-img-overlay"></div>
 										</div>
 										<div class="caption">
 											<div class="blog-txt">
 												<h3>
 													<a href="http://www.cm-mirandadocorvo.pt/pt/Default.aspx">
-														Descubra a linda cidade de Miranda do Corvo!
+														Descubra a linda vila de Miranda do Corvo!
 													</a>
 												</h3>
 												<p>
@@ -168,53 +143,44 @@ class App extends Component {
 											</div>
 										</div>
 									</div>
-
 								</div>
 
 								<div class="col-sm-4 col-md-4">
 									<div class="thumbnail">
 										<div class="thumbnail-img">
-											{info && info.map(obj => (
-												<img alt="blog" src={obj.img} />
-												))}
+											<img src="https://i2.wp.com/ncultura.pt/wp-content/uploads/2018/04/capa-8.jpg?fit=1500%2C640&ssl=1" alt="blog" className="thumbImage"></img>
 											<div class="thumbnail-img-overlay"></div>
 										</div>
 										<div class="caption">
 											<div class="blog-txt">
 												<h3>
-													<a href="/">
-													{info && info.map(obj =>
-														parse(obj.title),
-													)}
+													<a href="https://www.cm-coimbra.pt">
+														Coimbra!
 													</a>
 												</h3>
-												<p>
-												{info && info.map(obj =>
-													parse(obj.text),
-												)}
-												</p>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="col-sm-4 col-md-4">
-									<div class="thumbnail">
-										<div class="thumbnail-img">
-											<img src="http://quintaisdocaneiro.com/assets/images/news/thumbs370/p1d9iv245g8bl13ren9h1j4g13a34.jpg" alt="blog"></img>
-											<div class="thumbnail-img-overlay"></div>
-										</div>
-										<div class="caption">
-											<div class="blog-txt">
-												<h3><a href="/">10 Most Natural place to Discover</a></h3>
 												<p>
 													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
 												</p>
 											</div>
 										</div>
 									</div>
+								</div>
 
+								<div class="col-sm-4 col-md-4">
+									<div class="thumbnail">
+										<div class="thumbnail-img">
+											<img src="https://www.mundoportugues.pt/wp-content/uploads/sites/3/2018/01/camara-municipal-da-lousa-890x593.jpg" alt="blog"></img>
+											<div class="thumbnail-img-overlay"></div>
+										</div>
+										<div class="caption">
+											<div class="blog-txt">
+												<h3><a href="https://cm-lousa.pt/">Lousã</a></h3>
+												<p>
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+												</p>
+											</div>
+										</div>
+									</div>
 								</div>
 
 							</div>

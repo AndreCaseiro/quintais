@@ -15,6 +15,7 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { Form } from 'reactstrap'
 import Reservas from "./../../pages/Reservas"
+import { Trans } from 'react-i18next';
 
 const axios = require('axios').default;
 
@@ -52,7 +53,9 @@ resetForm() {
 handleChange = (param, e) => {
     this.setState({ [param]: e.target.value })
 }
+
     render() {
+      const placeh1 = <Trans i18nKey="place1"></Trans>
     return(
       <div className="Contactos">
       <div className="Header">
@@ -82,12 +85,12 @@ handleChange = (param, e) => {
     <div className="container">
       <div className="gallery-details">
         <div className="gallary-header text-center">
-          <h2> CONTACTE-NOS </h2>
+          <h2><Trans i18nKey="Contactus">CONTACTE-NOS</Trans> </h2>
         </div>
       <div className="row">
         <div className="col-md-8">
         <Form className="contactForm" onSubmit={this.handleSubmit.bind(this)}>
-              <input className="form-control" name="name" placeholder="Nome..." type="text" value={this.state.name} onChange={this.handleChange.bind(this, 'name')} required ></input>
+              <input className="form-control" name="name" placeholder={placeh1} type="text" value={this.state.name} onChange={this.handleChange.bind(this, 'name')} required ></input>
               <br></br>
               <input className="form-control" name="email" placeholder="Email..." type="text" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} required ></input>
               <br></br>
@@ -105,11 +108,11 @@ handleChange = (param, e) => {
       <div className="col-sm-4">
                 <div className="single-footer-item text-center">
                   <div className="single-footer-txt text-left">
-                    <p><b>Telefone:</b> (+351) 239 055 164</p>
-                    <p><b>Telemóvel:</b> (+351) 964 939 058</p>
-                    <p className="foot-email"><b>Email:</b><a href="/"> info@quintaisdocaneiro.com</a></p>
-                    <p><b>GPS:</b> 40.17782, -8.319366</p>
-                    <p><b>Morada:</b><br></br>Caneiro dos Braços - Semide - 3220-423</p>
+                    <p><b><Trans i18nKey="c1">Telefone:</Trans></b>(+351) 239 055 164</p>
+                    <p><b><Trans i18nKey="c2">Telemóvel:</Trans></b> (+351) 964 939 058</p>
+                    <p className="foot-email"><b><Trans i18nKey="c3">Email:</Trans></b><a href="/"> info@quintaisdocaneiro.com</a></p>
+                    <p><b><Trans i18nKey="c4">GPS:</Trans></b> 40.17782, -8.319366</p>
+                    <p><b><Trans i18nKey="c5">Morada:</Trans></b><br></br>Caneiro dos Braços - Semide - 3220-423</p>
                     <p>Miranda do Corvo, Portugal</p>
                     <br></br>
                     <br></br>
