@@ -10,6 +10,12 @@ import Galeria from './views/pages/Quintaisdocaneiro/Galeria'
 import Contactos from './views/pages/Contactos/index'
 import "./i18n";
 
+const NoMatchPage = () => {
+  return (
+    <h3>404 - Desculpe esta página não está disponível.</h3>
+  );
+};
+
 const routing = (
   <Router>
   <Route exact path="/" component={App} />
@@ -17,6 +23,8 @@ const routing = (
   <Route path="/:lang/pages/:area" component={Pages} />
   <Route exact path="/:lang/Galeria" component={Galeria} />
   <Route exact path="/:lang/Contactos" component={Contactos} />
+  <Route component={NoMatchPage} />
+  <Route exact path=":lang/pages" component={NoMatchPage}/>
   </Router>
   )
 

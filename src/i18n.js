@@ -11,7 +11,7 @@ i18n
                 translations: {
                     "Quintais": "Quintais do Caneiro",
                     "Empreendimento": "O Empreendimento",
-                    "Galeria": "galeria",
+                    "Galeria": "Galeria",
                     "Alojamento": "Alojamento",
                     "Localizacao": "A Localização",
                     "Comodidades": "Comodidades",
