@@ -8,6 +8,7 @@ import "./../../css/hover-min.css";
 import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
+import { Trans } from 'react-i18next';
 
 class Footer extends Component {
     render(){
@@ -17,11 +18,8 @@ class Footer extends Component {
               <div className="container">
                 <div className="subscribe-title text-center">
                   <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                  <Trans i18nKey="pisc"></Trans>
                   </h2>
-                  <p>
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
-                  </p>
                 </div>
               </div>
           </section>

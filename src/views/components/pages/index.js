@@ -15,6 +15,7 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import parse from 'html-react-parser';
 import Reservas from "./../../pages/Reservas"
+import Caminho from "./../../pages/Caminho"
 import empreendimento from "./../../css/images/images/empreendimento.jpg"
 
 const axios = require('axios').default;
@@ -88,6 +89,7 @@ class Pages extends Component {
         parse(obj.text),
       )}
     </div>
+    {this.props.match.params.area === 'ocaminho' && <Caminho></Caminho>}
     <div className="Footer"><Footer></Footer></div>
     </div>
     );

@@ -37,6 +37,7 @@ i18n
                     "c5": "Morada: ",
                     "Contactus": "CONTACTE-NOS",
                     "placeh1": "asdasd",
+                    "pisc": "Viva as suas emoções num ambiente tranquilo, intimista e acolhedor",
                 }
             },
             es:{
@@ -68,6 +69,7 @@ i18n
                     "c2": "Teléfono móvil: ",
                     "c5": "Dirección: ",
                     "Contactus": "CONTÁCTE-NOS",
+                    "pisc": "Vive tus emociones en un ambiente tranquilo, íntimo y acogedor",
                 }
             },
             fr:{
@@ -99,6 +101,7 @@ i18n
                     "c2": "Téléphone portable: ",
                     "c5": "Adresse: ",
                     "Contactus": "CONTACTEZ-NOUS",
+                    "pisc": "Vivez vos émotions dans un environnement calme, intime et accueillant",
                 }
             },
             gb:{
@@ -130,6 +133,7 @@ i18n
                     "c2": "Mobile Phone: ",
                     "c5": "Address: ",
                     "Contactus": "CONTACT-US",
+                    "pisc": "Live your emotions in a quiet, intimate and welcoming environment",
                 }
             }
         },

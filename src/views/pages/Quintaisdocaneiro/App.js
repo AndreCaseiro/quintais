@@ -98,11 +98,8 @@ class App extends Component {
               <div className="container">
                 <div className="subscribe-title text-center">
                   <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				  <Trans i18nKey="pisc">Viva as suas emoções num ambiente tranquilo, intimista e acolhedor</Trans>
                   </h2>
-                  <p>
-                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
-                  </p>
                 </div>
               </div>
           </section>
@@ -134,11 +131,11 @@ class App extends Component {
 											<div class="blog-txt">
 												<h3>
 													<a href="http://www.cm-mirandadocorvo.pt/pt/Default.aspx">
-														Descubra a linda vila de Miranda do Corvo!
+														Miranda do Corvo
 													</a>
 												</h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+												Terras da Chanfana … onde a Natureza tem outro encanto
 												</p>
 											</div>
 										</div>
@@ -155,11 +152,11 @@ class App extends Component {
 											<div class="blog-txt">
 												<h3>
 													<a href="https://www.cm-coimbra.pt">
-														Coimbra!
+														Coimbra
 													</a>
 												</h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+												A cidade do Conhecimento, Património Mundial da UNESCO
 												</p>
 											</div>
 										</div>
@@ -176,7 +173,7 @@ class App extends Component {
 											<div class="blog-txt">
 												<h3><a href="https://cm-lousa.pt/">Lousã</a></h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+												Património e Natureza. A Serra da Lousã e as suas aldeias de xisto
 												</p>
 											</div>
 										</div>
