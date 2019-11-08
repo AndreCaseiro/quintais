@@ -64,7 +64,6 @@ class Header extends Component {
                                 <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Alojamento')}>
                                     <Dropdown.Item href={`/${route}/pages/localizacao`}><Trans i18nKey="Localizacao"></Trans></Dropdown.Item>
                                     <Dropdown.Item href={`/${route}/pages/comodidades`}><Trans i18nKey="Comodidades"></Trans></Dropdown.Item>
-                                    <Dropdown.Item href={`/${route}/pages/veralojamento`}><Trans i18nKey="Aloja"></Trans></Dropdown.Item>
                                 </DropdownButton>
                                 </li>
                                 <li>
@@ -80,7 +79,7 @@ class Header extends Component {
                                 <Link to={`/${route}/contactos`}><Trans i18nKey="Contactos"></Trans></Link>
                                 </li>
                                 <li>
-                                <ReactFlagsSelect
+                                <ReactFlagsSelect className="flags"
                                     defaultCountry={route.toUpperCase()}
                                     countries={["ES", "GB", "FR", "PT"]}
                                     showSelectedLabel={false}

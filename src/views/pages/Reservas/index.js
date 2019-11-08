@@ -34,7 +34,8 @@ const axios = require('axios').default;
                     axios.get('http://admin.quintaisdocaneiro.com/api/gets.php?act=bookNow&check_in='+this.state.check_in + '&check_out='+this.state.check_out + '&adults=' +this.state.adults + '&children=' +this.state.children + '&email=' +this.state.email)
                     .then((response) => {
                         this.setState({
-                            info:{response}
+                            info:{response},
+                            show: true
                         })
                         })
                     }
@@ -52,7 +53,6 @@ const axios = require('axios').default;
         }
         handleChange = (param, e) => {
             this.setState({ [param]: e.target.value })
-            this.setState({info:[param]})
         }
         hiddenAlert = () => {
             this.setState({ show: false });
@@ -129,7 +129,7 @@ const axios = require('axios').default;
                                                     <div class="row">
                                                         <div>
                                                             <div className="about-btn travel-mrt-0 pull-right" type="submit">
-                                                                <button class="about-view travel-btn" onClick={() => this.state.info !==  '' ? this.setState({ show: true }) : this.setState({ show: false })}><Trans i18nKey="disponibilidade"></Trans></button>
+                                                                <button class="about-view travel-btn"><Trans i18nKey="disponibilidade"></Trans></button>
                                                                 <SweetAlert
                                                                     show={this.state.show}
                                                                     title="Sucesso"

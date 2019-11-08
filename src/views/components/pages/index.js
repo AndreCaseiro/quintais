@@ -94,6 +94,8 @@ class Pages extends Component {
     {info && info.map(obj =>
         parse(obj.text),
       )}
+      <br></br>
+      <br></br>
     </div>
     {this.props.match.params.area === 'ocaminho' && <Caminho></Caminho>}
     <div className="Footer"><Footer></Footer></div>

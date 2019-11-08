@@ -104,11 +104,11 @@ class App extends Component {
 			<div class="container">
 				<div class="blog-details">
 						<div class="gallary-header text-center">
-							<h2>
+							<h1>
 							<Trans i18nKey="t1">
 								latest news
 								</Trans>
-							</h2>
+							</h1>
 							<p>
 							<Trans i18nKey="t2">
 								Travel News from all over the world 

@@ -1642,7 +1642,7 @@ border-color:transparent;
 
     .flag-select .arrow-down {
         color:white!important;
-        margin-top:50px;
+        padding: 4px!important;
     }
 
     .sticky{
@@ -1670,5 +1670,8 @@ border-color:transparent;
     }
     .thumbImage{
         max-height: 207px;
+    }
+    .flags{
+        margin-top: 4px;
     }
 /*========================Thank you=================*/
