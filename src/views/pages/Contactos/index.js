@@ -15,7 +15,7 @@ import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { Form } from 'reactstrap'
 import Reservas from "./../../pages/Reservas"
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
 
 const axios = require('axios').default;
 

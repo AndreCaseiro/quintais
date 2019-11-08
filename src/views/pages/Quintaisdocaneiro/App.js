@@ -48,12 +48,12 @@ class App extends Component {
 				<div class="gallery-details">
 					<div class="gallary-header text-center">
 						<h2 class="t1">
-						<Trans i18nKey="t1">
+						<Trans i18nKey="t5">
 							top destination
 							</Trans>
 						</h2>
 						<p>
-						<Trans i18nKey="t2">
+						<Trans i18nKey="t6">
 							Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
 							</Trans>
 						</p>
@@ -97,9 +97,6 @@ class App extends Component {
     <section id="subs" className="subscribe">
               <div className="container">
                 <div className="subscribe-title text-center">
-                  <h2>
-				  <Trans i18nKey="pisc">Viva as suas emoções num ambiente tranquilo, intimista e acolhedor</Trans>
-                  </h2>
                 </div>
               </div>
           </section>

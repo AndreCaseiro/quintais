@@ -17,6 +17,7 @@ import parse from 'html-react-parser';
 import Reservas from "./../../pages/Reservas"
 import Caminho from "./../../pages/Caminho"
 import empreendimento from "./../../css/images/images/empreendimento.jpg"
+import ErrorBoundary from '../../components/Error/index'
 
 const axios = require('axios').default;
 
@@ -25,18 +26,22 @@ const sectionStyle = {
 	backgroundRepeat: "no-repeat",
 	backgroundSize: "cover"
 }
-const NoMatchPage = () => {
-  return (
-    <h3>404 - Not found</h3>
-  );
-};
+
+const pages = ['Empreendimento', 'localizacao', 'comodidades', 'veralojamento', 'actividades', 'ocaminho', 'reservas'];
+
 class Pages extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
       info: null,
     };
+
+    if(!pages.includes(this.props.match.params.area)) {
+      window.location.href = "/"
+    }
   }
+
     componentDidMount(){
     this.getAdminContent();
     }
@@ -51,13 +56,14 @@ class Pages extends Component {
           })
         }
     }
-
+    Error(){
+    }
     render() {
     const { info } = this.state;
-
+    
     return(
+      <ErrorBoundary>
       <div className="entretenimento">
-
       <div className="Header"><Header></Header>
       <section id="home" className="about-us" style={sectionStyle}>
       <div className="container">
@@ -92,6 +98,7 @@ class Pages extends Component {
     {this.props.match.params.area === 'ocaminho' && <Caminho></Caminho>}
     <div className="Footer"><Footer></Footer></div>
     </div>
+    </ErrorBoundary>
     );
 
 }

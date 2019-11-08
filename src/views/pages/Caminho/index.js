@@ -8,8 +8,9 @@ import "./../../css/hover-min.css";
 import "./../../css/owl.theme.default.min.css";
 import "./../../css/responsive.css";
 import "./../../css/style.css";
-import { Trans } from 'react-i18next';
-import vista from "./../../css/images/images/vista.jpg"
+import caminho from "./../../css/images/images/caminho.JPG";
+import caminho1 from "./../../css/images/images/caminho1.JPG";
+import caminho2 from "./../../css/images/images/caminho2.JPG";
 
 class Caminho extends Component {
     render(){
@@ -19,19 +20,32 @@ class Caminho extends Component {
             <br></br>
             <div class="col-md-4">
 					<div class="filtr-item">
-						<img src={vista} alt="fora 1 "/>
+						<img src={caminho} alt="fora 1 "/>
 					</div>
 				</div>
                 <div class="col-md-4">
 					<div class="filtr-item">
-						<img src={vista} alt="fora 1 "/>
+						<img src={caminho1} alt="fora 1 "/>
 					</div>
 				</div>
                 <div class="col-md-4">
 					<div class="filtr-item">
-						<img src={vista} alt="fora 1 "/>
+						<img src={caminho2} alt="fora 1 "/>
 					</div>
 				</div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <br></br>
             <br></br>
             <br></br>
