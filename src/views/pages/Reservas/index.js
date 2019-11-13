@@ -27,6 +27,7 @@ const axios = require('axios').default;
             email: '',
             info: '',
             show: false,
+            startDate:new Date(),
         }
         handleSubmit(e) {
             e.preventDefault()
@@ -75,7 +76,7 @@ const axios = require('axios').default;
                                                             <div class="single-tab-select-box">
                                                                 <h2><Trans i18nKey="dataentrada">Data Entrada</Trans></h2>
                                                                 <div class="travel-check-icon">
-                                                                    <input class="form-control" mask="00-00-0000" name="check_in" placeholder="12-08-2019" type="text" value={this.state.check_in} onChange={this.handleChange.bind(this, 'check_in')} required ></input>
+                                                                    <input class="form-control" mask="00-00-0000" name="check_in" placeholder="12-08-2019" type="date" value={this.state.check_in} onChange={this.handleChange.bind(this, 'check_in')} required></input>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -84,7 +85,7 @@ const axios = require('axios').default;
                                                             <div class="single-tab-select-box">
                                                                 <h2><Trans i18nKey="datasaida">Data Saída</Trans></h2>
                                                                 <div class="travel-check-icon">
-                                                                    <input class="form-control" mask="00-00-0000" name="check_out" placeholder="22-08-2019" type="text" value={this.state.check_out} onChange={this.handleChange.bind(this, 'check_out')} required ></input>
+                                                                    <input class="form-control" mask="00-00-0000" name="check_out" placeholder="22-08-2019" type="date" value={this.state.check_out} onChange={this.handleChange.bind(this, 'check_out')} required ></input>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -120,7 +121,7 @@ const axios = require('axios').default;
                                                             <div class="single-tab-select-box">
                                                                 <h2><Trans i18nKey="email">Email</Trans></h2>
                                                                 <div class="email-check-icon">
-                                                                    <input class="form-control" name="email" placeholder="email@email.com" type="email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} required ></input>
+                                                                    <input class="form-control" name="email" placeholder="Email@email.com" type="email" value={this.state.email} onChange={this.handleChange.bind(this, 'email')} required ></input>
                                                             </div>
                                                         </div>
                                                     </div>

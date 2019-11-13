@@ -73,7 +73,7 @@ class Header extends Component {
                                     </DropdownButton>
                                 </li>
                                 <li>
-                                <Link to={`/${route}/pages/reservas`}><Trans i18nKey="Reservas"></Trans></Link>
+                                <a  href={`/${route}/pages/reservas`}><Trans i18nKey="Reservas"></Trans></a>
                                 </li>
                                 <li>
                                 <Link to={`/${route}/contactos`}><Trans i18nKey="Contactos"></Trans></Link>

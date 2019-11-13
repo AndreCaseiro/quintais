@@ -73,7 +73,6 @@ h1,h2,h3,h4,h5,h6 {
 
 	margin: 0;
 	color:#222222;
-	text-transform: capitalize;
 
 }
 
@@ -531,7 +530,6 @@ border-color:transparent;
 	color:#aaa;
 	font-size:14px;
 	font-family: 'Poppins', sans-serif;
-	text-transform: capitalize;
 	height: 48px;
 }/*select*/
 
@@ -1673,5 +1671,9 @@ border-color:transparent;
     }
     .flags{
         margin-top: 4px;
+    }
+    .static p,
+    .static span{
+        font-size:17px!important;
     }
 /*========================Thank you=================*/

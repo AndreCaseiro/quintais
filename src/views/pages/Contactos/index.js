@@ -14,7 +14,6 @@ import "./../../css/responsive.css";
 import "./../../css/style.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { Form } from 'reactstrap'
-import Reservas from "./../../pages/Reservas"
 import { Trans } from 'react-i18next';
 
 const axios = require('axios').default;
@@ -76,7 +75,6 @@ handleChange = (param, e) => {
         </div>
       </div>
     </section>
-      <Reservas></Reservas>
     <div className="container">
       <div className="gallery-details">
       
@@ -105,7 +103,6 @@ handleChange = (param, e) => {
       <div className="col-sm-4">
                 <div className="single-footer-item text-center">
                   <div className="single-footer-txt text-left">
-                  
                     <p><b><Trans i18nKey="c1">Telefone:</Trans></b>(+351) 239 055 164</p>
                     <p><b><Trans i18nKey="c2">Telemóvel:</Trans></b> (+351) 964 939 058</p>
                     <p className="foot-email"><b><Trans i18nKey="c3">Email: </Trans></b><a href=" mailto:info@quintaisdocaneiro.com"> info@quintaisdocaneiro.com</a></p>

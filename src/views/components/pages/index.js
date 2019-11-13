@@ -90,10 +90,11 @@ class Pages extends Component {
     </section>
     {this.props.match.params.area === 'reservas' && <Reservas></Reservas>}
     </div>
-    <div className="container mt-5">
+    <div className="container mt-5 static">
     {info && info.map(obj =>
         parse(obj.text),
       )}
+      {this.props.match.params.area === 'Empreendimento'}
       <br></br>
       <br></br>
     </div>
