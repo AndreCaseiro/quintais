@@ -1642,6 +1642,9 @@ border-color:transparent;
         color:white!important;
         padding: 4px!important;
     }
+    .flag-select img{
+        top:0!important;
+    }
 
     .sticky{
         position:fixed;
@@ -1658,9 +1661,8 @@ border-color:transparent;
         font-size:16px;
     }
     .logoquintais{
-        width: 75%;
+        width: 100px;
         position:relative;
-        left: -100px;
     }
     .BrainhubCarousel__arrows{
         background-color:grey!important;
@@ -1676,4 +1678,23 @@ border-color:transparent;
     .static span{
         font-size:17px!important;
     }
+    .dropdown-item{
+        white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left:5px!important;
+  padding-bottom:5px!important;
+  padding-right:5px!important;
+    }
+@media all and (max-width:479px) {
+    .logoquintais {
+        width: 150px;
+        float:right;
+    }
+}
+@media all and (max-width:479px) {
+    .logo {
+        float:right!important;
+    }
+}
 /*========================Thank you=================*/

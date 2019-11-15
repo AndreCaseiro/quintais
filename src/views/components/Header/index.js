@@ -15,6 +15,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 import { withTranslation, Trans } from 'react-i18next';
+import { slide as Menu } from 'react-burger-menu'
 
 class Header extends Component {
     componentDidMount(){
@@ -35,8 +36,13 @@ class Header extends Component {
         this.props.history.replace('/'+lang.toLowerCase()+this.props.location.pathname.substring(3))
         window.location.reload();
     }
+    showSettings (event) {
+        event.preventDefault();
+      }
 
     render(){
+        
+          
         const route= this.props.match.params.lang ? this.props.match.params.lang : "pt";
         return(
             <React.Fragment>
@@ -46,7 +52,8 @@ class Header extends Component {
                 <div className="row">
                     <div className="col-sm-2">
                     <div className="logo">
-                        <a href={`/${route}`}><img className="logoquintais" src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
+                        <a href={`/${route}`}>
+                        <img className="logoquintais" src="http://quintaisdocaneiro.com/assets/images/logo/logo.png" alt="logo2"></img></a>
                     </div>
                     </div>
                     <div className="col-sm-10">
