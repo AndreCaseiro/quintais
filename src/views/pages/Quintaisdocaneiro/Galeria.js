@@ -66,7 +66,7 @@ class Galeria extends Component {
       </div>
     </section>
     <div className="App" style={{ width:"70%", margin: "auto", padding: "50px" }}>
-    <Carousel autoPlay >
+    <Carousel dynamicHeight="true" >
     {info && info.map(obj => (
       <img alt="Image1" src={obj.img} />
     ))}

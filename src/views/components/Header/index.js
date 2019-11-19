@@ -15,7 +15,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 import { withTranslation, Trans } from 'react-i18next';
-import { slide as Menu } from 'react-burger-menu'
 
 class Header extends Component {
     componentDidMount(){

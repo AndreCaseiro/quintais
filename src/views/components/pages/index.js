@@ -18,8 +18,6 @@ import Reservas from "./../../pages/Reservas"
 import Caminho from "./../../pages/Caminho"
 import empreendimento from "./../../css/images/images/empreendimento.jpg"
 import ErrorBoundary from '../../components/Error/index'
-import { slide as Menu } from 'react-burger-menu'
-
 
 const axios = require('axios').default;
 
