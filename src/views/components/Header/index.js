@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import "./../../css/animate.css";
-import "./../../css/bootsnav.css";
-import "./../../css/bootstrap.min.css";
-import "./../../css/datepicker.css";
-import "./../../css/font-awesome.min.css";
-import "./../../css/hover-min.css";
-import "./../../css/owl.theme.default.min.css";
-import "./../../css/responsive.css";
 import "./../../css/style.css";
 import Dropdown from 'react-bootstrap/Dropdown'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -58,7 +50,7 @@ class Header extends Component {
                     <div className="col-sm-10">
                     <div className="main-menu">
                     <div className="sticky">
-                        <div className="navbar"  >
+                        <div className="navbar">
                             <ul className="nav navbar-nav navbar-right">
                                 <li>
                                 <DropdownButton id="dropdown-basic-button" title={this.props.i18n.t('Quintais')}>

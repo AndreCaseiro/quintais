@@ -1689,13 +1689,35 @@ border-color:transparent;
 
 @media all and (max-width:479px) {
     .logoquintais {
-        width: 150px;
         float:right;
     }
 }
 @media all and (max-width:479px) {
     .logo {
         float:right!important;
+        margin-right:100px;
     }
+}
+
+@media screen and (max-width:1000px){
+    .main-menu .nav li a{
+        font-size:16px!important;
+    }
+}
+
+@media screen and (max-width:767px){
+    .main-menu .nav li a{
+        padding:0 !important;
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width:100%!important;
+}
+}
+@media (min-width:576px){
+    .container{
+        max-width:100%!important;
+}
 }
 /*========================Thank you=================*/
