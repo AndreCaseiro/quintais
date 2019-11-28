@@ -211,7 +211,7 @@ html,body{
 }
 .main-menu .nav li a,
 .main-menu .nav li button{
-    padding: 11px 0 29px;
+    padding: 11px 0 10px;
     color: #fff;
     font-size: 16px;
     text-transform: capitalize;
@@ -221,6 +221,10 @@ html,body{
     -moz-transition: all 0.25s ease-in-out 0s;
     -o-transition: all 0.25s ease-in-out 0s;
     transition: all 0.25s ease-in-out 0s;
+    white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
 }
 .main-menu  .nav  li.active a,
 .main-menu .nav li.active button,
@@ -1607,7 +1611,7 @@ border-color:transparent;
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .navbar-nav {
@@ -1661,7 +1665,7 @@ border-color:transparent;
         font-size:16px;
     }
     .logoquintais{
-        width: 100px;
+        width: 100%;
         position:relative;
     }
     .BrainhubCarousel__arrows{
@@ -1687,15 +1691,202 @@ border-color:transparent;
         padding-right:5px!important;
     }
 
-@media all and (max-width:479px) {
-    .logoquintais {
-        float:right;
+
+/*TEST*/
+html,
+body {
+  margin: 0;
+}
+
+#App {
+  font-family: sans-serif;
+
+  /* Give app full page to work with */
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 37px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 34px!important;
+  width: 37px!important;
+  right:105px!important;
+  top:1px!important;
+  left:36px;
+  opacity:0;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+.bm-menu-wrap{
+    width:61%!important;
+    height:65%!important;
+    left:1px!important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    width:60%!important;
+    height: 65%!important;
+    left:1px;
+}
+
+@media all and (max-width:375px){
+    .bm-overlay{
+        width:55%!important;
+        height:55%!important;
     }
 }
-@media all and (max-width:479px) {
+@media all and (max-width:375px){
+    .bm-menu-wrap{
+        width: 55%!important;
+        height: 55%!important;;
+    }
+}
+
+@media all and (max-width:320px){
+    .bm-overlay{
+        width:60%!important;
+        height:65%!important;
+    }
+}
+@media all and (max-width:320px){
+    .bm-menu-wrap{
+        width: 60%!important;
+        height: 65%!important;;
+    }
+}
+
+
+@media all and (max-width:360px){
+    .bm-overlay{
+        width:60%!important;
+        height:65%!important;
+    }
+}
+@media all and (max-width:360px){
+    .bm-menu-wrap{
+        width: 60%!important;
+        height: 65%!important;;
+    }
+}
+
+
+@media all and (max-height:667px){
+    .bm-overlay{
+        width:60%!important;
+        height:65%!important;
+    }
+}
+@media all and (max-height:667px){
+    .bm-menu-wrap{
+        width: 60%!important;
+        height: 65%!important;;
+    }
+}
+
+@media all and (max-height:823px){
+    .bm-overlay{
+        width:55%!important;
+        height:55%!important;
+    }
+}
+@media all and (max-height:823px){
+    .bm-menu-wrap{
+        width: 55%!important;
+        height: 55%!important;;
+    }
+}
+
+
+@media all and (max-height:568px){
+    .bm-overlay{
+        width:60%!important;
+        height:65%!important;
+    }
+}
+@media all and (max-height:568px){
+    .bm-menu-wrap{
+        width: 60%!important;
+        height: 65%!important;;
+    }
+}
+/*ENDTEST*/
+
+@media all and (max-width:575px) {
+    .logoquintais {
+        float:right;
+        z-index:50;
+    }
+}
+@media all and (max-width:575px) {
     .logo {
         float:right!important;
         margin-right:100px;
+        width: 15%;
+    }
+}
+
+@media all and (max-width:576px) {
+    .logo {
+        width: 15%!important;
     }
 }
 
@@ -1705,19 +1896,20 @@ border-color:transparent;
     }
 }
 
-@media screen and (max-width:767px){
-    .main-menu .nav li a{
-        padding:0 !important;
+@media screen and (min-width:600px){
+    .menuMobile{
+        display:none
     }
 }
-@media (min-width:768px){
-    .container{
-        max-width:100%!important;
+@media screen and (max-width:600px){
+    .menuDesktop{
+        display:none;
+    }
 }
+@media all and (max-width:575px){
+    .about-view.travel-btn {
+        font-size:13px!important;
+    }
 }
-@media (min-width:576px){
-    .container{
-        max-width:100%!important;
-}
-}
+
 /*========================Thank you=================*/
