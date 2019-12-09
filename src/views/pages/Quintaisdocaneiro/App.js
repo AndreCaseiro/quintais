@@ -97,6 +97,7 @@ class App extends Component {
     <section id="subs" className="subscribe">
               <div className="container">
                 <div className="subscribe-title text-center">
+				<h2>Projeto Financiado pela UE</h2>
                 </div>
               </div>
           </section>

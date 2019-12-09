@@ -1433,7 +1433,6 @@ border-color:transparent;
         13.  Footer-copyright
 --------------------------------------*/
 .footer-copyright{
-    background:#f9f9f9;
     padding: 0 0 60px;
 }
 .footer-content{
@@ -1510,6 +1509,7 @@ border-color:transparent;
     margin-top:60px;
 }
  .foot-icons .footer-social-links li {
+     margin-top: 15px;
     padding: 0 10px;
     text-align: center;
 }
@@ -1555,7 +1555,6 @@ border-color:transparent;
 .foot-icons p{
     color:#aaa;
     font-size:16px;
-    margin-top:28px;
 }
 .foot-icons p a,.foot-icons p a:hover,.foot-icons p a:focus{
     color:#00d8ff;
@@ -1691,6 +1690,10 @@ border-color:transparent;
         padding-right:5px!important;
     }
 
+        .cofinanciado{
+            font-size:16px;
+            float:left;
+        }
 
 /*TEST*/
 html,
